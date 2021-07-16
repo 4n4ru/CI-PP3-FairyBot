@@ -1,45 +1,169 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Fairy Bot
+(Developer: Ana Runje)
 
-Welcome USER_NAME,
+![Mockup image](docs/mockup.jpg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+[Live webpage](#)
 
-## Gitpod Reminders
+## Table of Content
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requirements and Expectations](#user-requirements-and-expectations)
+    3. [User Stories](#user-stories)
+    4. [Site Owner Stories](#site-owner-stories)
+3. [Design](#design)
+    1. [Design Choices](#design-choices)
+    2. [Colour](#colours)
+    3. [Fonts](#fonts)
+    4. [Structure](#structure)
+    5. [Flowchart](#flowchart)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+5. [Features](#features)
+6. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [JavaScript Validation](#javascript-validation)
+    4. [Accessibility](#accessibility)
+    5. [Performance](#performance)
+    6. [Device testing](#performing-tests-on-various-devices)
+    7. [Browser compatibility](#browser-compatability)
+    8. [Testing user stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Deployment](#deployment)
+    1. [EmailJS API](#emailjs-api)
+10. [Credits](#credits)
+11. [Acknowledgments](#acknowledgments)
 
-`python3 -m http.server`
+## Project Goals 
+Fairy Bot is an app that outputs a faritytale that has been personalized to the terminal.
 
-A blue button should appear to click: *Make Public*,
+### User Goals
+- Get personalized fairy tales for the users child
 
-Another blue button should appear to click: *Open Browser*.
+### Site Owner Goals
+- Providing users with the option to pick different farity tales that are personalized for their child
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## User Experience
 
-A blue button should appear to click: *Make Public*,
+### Target Audience
+- Parents who want to read personalized stories to their children at bed time
+- Children who would like to read personalized stories themselves
+- Childminders who want to be able to personalize stories for many children
 
-Another blue button should appear to click: *Open Browser*.
+### User Requirements and Expectations
+- Easy set up
+- Ability to delete add and delete data
+- Easy to use
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User Stories
+1. As a user, I want to be able to add info about my child
+2. As a user, I want an option to add multiple children
+3. As a user, I want to pick from a list of stories
+4. As a user, I want to be able to delete info about my child
 
-## Updates Since The Instructional Video
+### Site Owner Stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Design
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Design Choices
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Colour
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Fonts
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Structure
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Flowchart
+<details><summary>Flowchart</summary>
+<img src="docs/flowchart-fairy-bot.jpg">
+</details>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Technologies Used
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Languages
+- Python 3
 
---------
 
-Happy coding!
+### Frameworks & Tools
+- diagrams<span>.</span>net - to create a flow chart
+
+## Features
+
+## Validation
+
+### HTML Validation
+
+
+### CSS Validation
+
+
+### JavaScript Validation
+
+
+### Accessibility
+
+
+### Performance 
+
+
+### Performing tests on various devices 
+
+
+### Browser Compatability
+
+
+### Testing user stories
+
+1. As a user, I want to be able to pick a difficulty for the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+
+## Deployment
+The website was deployed using Heroku by following these steps:
+1. 
+
+You can fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in the upper right hand corner
+
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7.Press Enter to create your local clone.
+
+
+## Credits
+The app was inspired by Storpie - Bedtime stories and lullabies for kids by Zia produkcija d.o.o. android app
+
+### Media
+
+
+### Code
+
+
+## Acknowledgments
+I would like to take the opportunity to thank:
+- My mentor Mo Shami for his feedback, advice, guidance and support.
+- My husband Jure Runje for his support, advice, help with testing, and for giving me some kids free time to work on my project.

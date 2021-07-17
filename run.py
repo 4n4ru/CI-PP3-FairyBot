@@ -31,12 +31,20 @@ def pick_eye_color():
     Gets user input for eye color
     returns string
     """
-    print('Please choose your childs eye colour:')
-    print('1. Black')
-    print('2. Brown')
-    print('3. Green')
-    print('4. Blue')
-    eye_color = input()
+    while True:
+        print('Please choose your childs eye colour:')
+        print('1. Black')
+        print('2. Brown')
+        print('3. Green')
+        print('4. Blue')
+        try:
+            eye_color = int(input())
+            if eye_color < 1 or eye_color > 4:
+                raise ValueError('This should be a number between 1 and 4!')
+            else:
+                break
+        except ValueError as e:
+            print(f'Invalid data: {e}, please try again.\n')
     if eye_color == 1:
         return 'black'
     elif eye_color == 2:

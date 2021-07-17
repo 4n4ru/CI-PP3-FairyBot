@@ -55,25 +55,50 @@ def pick_eye_color():
         return 'blue'
 
 
-# def add_child():
-#     """
-#     Gets user input for child info
-#     returns child
-#     """
-#     name = input('Please enter your childs name:\n')
-#     parent = input('Please enter the childs parents name:\n')
-#     friend = input('Please enter your childs best friends name:\n')
-#     hair = pick_hair_color()
-#     eyes = pick_eye_color()
-#     child = ChildInfo.child_dict(name, parent, friend, hair, eyes)
-#     return child
+def pick_hair_color():
+    """
+    Gets user input for hair color
+    returns string
+    """
+    while True:
+        print('Please choose your childs hair colour:')
+        print('1. Black')
+        print('2. Brown')
+        print('3. Blond')
+        try:
+            eye_color = int(input())
+            if eye_color < 1 or eye_color > 3:
+                raise ValueError('This should be a number between 1 and 4!')
+            else:
+                break
+        except ValueError as e:
+            print(f'Invalid data: {e}, please try again.\n')
+    if eye_color == 1:
+        return 'black'
+    elif eye_color == 2:
+        return 'brown'
+    else:
+        return 'blond'
+
+
+def add_child():
+    """
+    Gets user input for child info
+    returns child dictionary
+    """
+    name = input('Please enter your childs name:\n')
+    parent = input('Please enter the childs parents name:\n')
+    friend = input('Please enter your childs best friends name:\n')
+    hair = pick_hair_color()
+    eyes = pick_eye_color()
+    child = ChildInfo(name, parent, friend, hair, eyes)
+    return child.make_dictionary()
 
 
 def main():
     print('Welcome to Fairy Bot!\n')
-    # child = add_child()
-    eye_color = pick_eye_color()
-    print(eye_color)
+    child = add_child()
+    print(child)
 
 
 main()

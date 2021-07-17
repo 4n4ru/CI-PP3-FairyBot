@@ -26,8 +26,22 @@ class ChildInfo:
         return child_dict
 
 
+def add_child():
+    """
+    Gets user input for child info
+    returns child
+    """
+    name = input('Please enter your childs name:\n')
+    parent = input('Please enter the childs parents name:\n')
+    friend = input('Please enter your childs best friends name:\n')
+    hair = pick_hair_color()
+    eyes = pick_eye_color()
+    child = ChildInfo.child_dict(name, parent, friend, hair, eyes)
+    return child
+
+
 def main():
     print('Welcome to Fairy Bot!\n')
-
+    child = add_child()
 
 main()

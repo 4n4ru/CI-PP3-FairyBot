@@ -1,1 +1,5 @@
-# python code goes here
+def main():
+    print('Welcome to Fairy Bot!\n')
+
+
+main()

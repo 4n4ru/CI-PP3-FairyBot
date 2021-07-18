@@ -97,8 +97,10 @@ def add_child():
 
 def main():
     print('Welcome to Fairy Bot!\n')
+    profiles = []
     child = add_child()
-    print(child)
+    profiles.append(child)
+    print(profiles)
 
 
 main()

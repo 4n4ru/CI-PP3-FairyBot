@@ -1,5 +1,6 @@
 import textwrap as tr
 
+
 class ChildInfo:
     """
     Child info class
@@ -41,7 +42,7 @@ def pick_color():
         print('6. Red')
         print('7. Purple')
         try:
-            color = int(input())
+            color = int(input('Enter a number: \n'))
             if color < 1 or color > 7:
                 raise ValueError('This should be a number between 1 and 7!')
             else:
@@ -117,7 +118,7 @@ def choose_child(profiles):
         for ind in range(len(names)):
             print(f'{ind+1}. {names[ind]}')
         try:
-            chosen = int(input('Please select one: \n'))
+            chosen = int(input('Please select a number: \n'))
             if chosen < 1 or chosen > len(names):
                 raise ValueError(
                     f'This should be a number between 1 and {len(names)}!')
@@ -143,6 +144,9 @@ def generate_story(child):
 def main():
     print('Welcome to Fairy Bot!\n')
     profiles = [{'name': 'Add new child'}]
+    if len(profiles) == 1:
+        child = add_child()
+        profiles.insert(-1, child)
     chosen = choose_child(profiles)
     while profiles[chosen]['name'] == 'Add new child':
         child = add_child()

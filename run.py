@@ -142,9 +142,9 @@ def main():
     print('Welcome to Fairy Bot!\n')
     profiles = [{'name': 'Add new child'}]
     chosen = choose_child(profiles)
-    if profiles[chosen]['name'] == 'Add new child':
+    while profiles[chosen]['name'] == 'Add new child':
         child = add_child()
-        profiles.insert(-2, child)
+        profiles.insert(-1, child)
         chosen = choose_child(profiles)
     story = generate_story(profiles[chosen])
     print(story)

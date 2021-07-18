@@ -98,7 +98,7 @@ def add_child():
 def choose_child(profiles):
     """
     Ask user to choose a child from the list of childrens names
-    returns choosen child
+    returns index of choosen option
     """
     names = []
     for child in profiles:
@@ -117,17 +117,17 @@ def choose_child(profiles):
                 break
         except ValueError as e:
             print(f'Invalid data: {e}, please try again.\n')
-    return names[choosen-1]
+    return choosen - 1
 
 
 def main():
     print('Welcome to Fairy Bot!\n')
-    profiles = []
-    child = add_child()
-    profiles.append(child)
-    print(profiles)
+    profiles = [{'name': 'Add new child'}]
     choosen = choose_child(profiles)
-    print(choosen)
+    if profiles[choosen]['name'] == 'Add new child':
+        child = add_child()
+    profiles.insert(-2, child)
+    print(profiles)
 
 
 main()

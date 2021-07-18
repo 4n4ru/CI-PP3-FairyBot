@@ -3,13 +3,12 @@ class ChildInfo:
     Child info class
     """
 
-    def __init__(self, name, parent, friend, hair, eyes):
+    def __init__(self, name, friend, color, food):
         # instance attribute
         self.name = name
-        self.parent = parent
         self.friend = friend
-        self.hair = hair
-        self.eyes = eyes
+        self.color = color
+        self.food = food
 
     def make_dictionary(self):
         """
@@ -18,67 +17,75 @@ class ChildInfo:
         """
         child_dict = {
             'name': self.name,
-            'parent': self.parent,
             'friend': self.friend,
-            'hair': self.hair,
-            'eyes': self.eyes
+            'color': self.color,
+            'food': self.food
         }
         return child_dict
 
 
-def pick_eye_color():
+def pick_color():
     """
     Gets user input for eye color
     returns string
     """
     while True:
-        print('Please choose your childs eye colour:')
-        print('1. Black')
-        print('2. Brown')
-        print('3. Green')
-        print('4. Blue')
+        print('Please choose your childs favorite colour:')
+        print('1. Blue')
+        print('2. Green')
+        print('3. Pink')
+        print('4. Yellow')
+        print('5. Orange')
+        print('6. Red')
+        print('7. Purple')
         try:
-            eye_color = int(input())
-            if eye_color < 1 or eye_color > 4:
-                raise ValueError('This should be a number between 1 and 4!')
+            color = int(input())
+            if color < 1 or color > 7:
+                raise ValueError('This should be a number between 1 and 7!')
             else:
                 break
         except ValueError as e:
             print(f'Invalid data: {e}, please try again.\n')
-    if eye_color == 1:
-        return 'black'
-    elif eye_color == 2:
-        return 'brown'
-    elif eye_color == 3:
-        return 'green'
-    else:
+    if color == 1:
         return 'blue'
-
-
-def pick_hair_color():
-    """
-    Gets user input for hair color
-    returns string
-    """
-    while True:
-        print('Please choose your childs hair colour:')
-        print('1. Black')
-        print('2. Brown')
-        print('3. Blond')
-        try:
-            eye_color = int(input())
-            if eye_color < 1 or eye_color > 3:
-                raise ValueError('This should be a number between 1 and 4!')
-            else:
-                break
-        except ValueError as e:
-            print(f'Invalid data: {e}, please try again.\n')
-    if eye_color == 1:
-        return 'black'
-    elif eye_color == 2:
-        return 'brown'
+    elif color == 2:
+        return 'green'
+    elif color == 3:
+        return 'pink'
+    elif color == 4:
+        return 'yellow'
+    elif color == 5:
+        return 'orange'
+    elif color == 6:
+        return 'red'
     else:
-        return 'blond'
+        return 'purple'
+
+
+# def pick_hair_color():
+#     """
+#     Gets user input for hair color
+#     returns string
+#     """
+#     while True:
+#         print('Please choose your childs hair colour:')
+#         print('1. Black')
+#         print('2. Brown')
+#         print('3. Blond')
+#         try:
+#             eye_color = int(input())
+#             if eye_color < 1 or eye_color > 3:
+#                 raise ValueError('This should be a number between 1 and 4!')
+#             else:
+#                 break
+#         except ValueError as e:
+#             print(f'Invalid data: {e}, please try again.\n')
+#     if eye_color == 1:
+#         return 'black'
+#     elif eye_color == 2:
+#         return 'brown'
+#     else:
+#         return 'blond'
 
 
 def add_child():
@@ -87,11 +94,10 @@ def add_child():
     returns child dictionary
     """
     name = input('Please enter your childs name:\n')
-    parent = input('Please enter the childs parents name:\n')
     friend = input('Please enter your childs best friends name:\n')
-    hair = pick_hair_color()
-    eyes = pick_eye_color()
-    child = ChildInfo(name, parent, friend, hair, eyes)
+    color = pick_color()
+    food = input('Please enter your childs favourite food:\n')
+    child = ChildInfo(name, friend, color, food)
     return child.make_dictionary()
 
 
@@ -120,14 +126,17 @@ def choose_child(profiles):
     return chosen - 1
 
 
+# def generate_story(child):
+
+
 def main():
     print('Welcome to Fairy Bot!\n')
     profiles = [{'name': 'Add new child'}]
     chosen = choose_child(profiles)
     if profiles[chosen]['name'] == 'Add new child':
         child = add_child()
-    profiles.insert(-2, child)
-    print(profiles)
-
+        profiles.insert(-2, child)
+        chosen = choose_child(profiles)
+    # generate_story(profiles[chosen])
 
 main()

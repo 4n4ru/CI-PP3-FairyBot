@@ -26,7 +26,7 @@ class ChildInfo:
 
 def pick_color():
     """
-    Gets user input for eye color
+    Gets user input for favorite color
     returns string
     """
     while True:
@@ -126,7 +126,16 @@ def choose_child(profiles):
     return chosen - 1
 
 
-# def generate_story(child):
+def generate_story(child):
+    """
+    Generates the custom story using a dictionary with child info by replacing 
+    placeholder text
+    returns custom story
+    """
+    with open('stories/a-golden-touch.txt') as f:
+        story = f.read()
+    custom_story = story.format(**child)
+    return custom_story
 
 
 def main():
@@ -137,6 +146,8 @@ def main():
         child = add_child()
         profiles.insert(-2, child)
         chosen = choose_child(profiles)
-    # generate_story(profiles[chosen])
+    story = generate_story(profiles[chosen])
+    print(story)
+
 
 main()

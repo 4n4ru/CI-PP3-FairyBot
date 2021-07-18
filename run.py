@@ -95,12 +95,39 @@ def add_child():
     return child.make_dictionary()
 
 
+def choose_child(profiles):
+    """
+    Ask user to choose a child from the list of childrens names
+    returns choosen child
+    """
+    names = []
+    for child in profiles:
+        names.append(child['name'])
+
+    while True:
+        print('Please choose the child the story should be personalized for: ')
+        for ind in range(len(names)):
+            print(f'{ind+1}. {names[ind]}')
+        try:
+            choosen = int(input('Please select one: \n'))
+            if choosen < 1 or choosen > len(names):
+                raise ValueError(
+                    f'This should be a number between 1 and {len(names)}!')
+            else:
+                break
+        except ValueError as e:
+            print(f'Invalid data: {e}, please try again.\n')
+    return names[choosen-1]
+
+
 def main():
     print('Welcome to Fairy Bot!\n')
     profiles = []
     child = add_child()
     profiles.append(child)
     print(profiles)
+    choosen = choose_child(profiles)
+    print(choosen)
 
 
 main()

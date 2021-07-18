@@ -128,7 +128,7 @@ def choose_child(profiles):
 
 def generate_story(child):
     """
-    Generates the custom story using a dictionary with child info by replacing 
+    Generates the custom story using a dictionary with child info by replacing
     placeholder text
     returns custom story
     """

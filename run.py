@@ -1,3 +1,5 @@
+import textwrap as tr
+
 class ChildInfo:
     """
     Child info class
@@ -147,7 +149,7 @@ def main():
         profiles.insert(-1, child)
         chosen = choose_child(profiles)
     story = generate_story(profiles[chosen])
-    print(story)
+    print(tr.fill(story, 70))
 
 
 main()

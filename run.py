@@ -6,12 +6,17 @@ class ChildInfo:
     Child info class
     """
 
-    def __init__(self, name, friend, color, food):
+    def __init__(self,
+                 name, friend, color, food, animal, sport, dislike_food, sex):
         # instance attribute
         self.name = name
         self.friend = friend
         self.color = color
         self.food = food
+        self.animal = animal
+        self.sport = sport
+        self.dislike_food = dislike_food
+        self.sex = sex
 
     def make_dictionary(self):
         """
@@ -22,7 +27,11 @@ class ChildInfo:
             'name': self.name,
             'friend': self.friend,
             'color': self.color,
-            'food': self.food
+            'food': self.food,
+            'animal': self.animal,
+            'sport': self.sport,
+            'dislike_food': self.dislike_food,
+            'sex': self.sex
         }
         return child_dict
 
@@ -65,32 +74,6 @@ def pick_color():
         return 'purple'
 
 
-# def pick_hair_color():
-#     """
-#     Gets user input for hair color
-#     returns string
-#     """
-#     while True:
-#         print('Please choose your childs hair colour:')
-#         print('1. Black')
-#         print('2. Brown')
-#         print('3. Blond')
-#         try:
-#             eye_color = int(input())
-#             if eye_color < 1 or eye_color > 3:
-#                 raise ValueError('This should be a number between 1 and 4!')
-#             else:
-#                 break
-#         except ValueError as e:
-#             print(f'Invalid data: {e}, please try again.\n')
-#     if eye_color == 1:
-#         return 'black'
-#     elif eye_color == 2:
-#         return 'brown'
-#     else:
-#         return 'blond'
-
-
 def add_child():
     """
     Gets user input for child info
@@ -100,7 +83,12 @@ def add_child():
     friend = input('Please enter your childs best friends name:\n')
     color = pick_color()
     food = input('Please enter your childs favourite food:\n')
-    child = ChildInfo(name, friend, color, food)
+    animal = input('Please enter your childs favourite animal: \n')
+    sport = input('Please enter your childs favourite team sport: \n')
+    dislike_food = input('Please enter a food your child dislikes: \n')
+    sex = input('Is your child male or female? Please enter f/m: \n')
+    child = ChildInfo(
+        name, friend, color, food, animal, sport, dislike_food, sex)
     return child.make_dictionary()
 
 
@@ -135,7 +123,7 @@ def generate_story(child):
     placeholder text
     returns custom story
     """
-    with open('stories/a-golden-touch.txt') as f:
+    with open('stories/male-main-character/a-golden-touch.txt') as f:
         story = f.read()
     custom_story = story.format(**child)
     return custom_story

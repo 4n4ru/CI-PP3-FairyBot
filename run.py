@@ -118,13 +118,13 @@ def choose_child(profiles):
     return chosen - 1
 
 
-def generate_story(child):
+def generate_story(child, story):
     """
     Generates the custom story using a dictionary with child info by replacing
     placeholder text
     returns custom story
     """
-    with open('stories/male-main-character/a-golden-touch.txt') as f:
+    with open(story) as f:
         story = f.read()
     custom_story = story.format(**child)
     return custom_story
@@ -159,7 +159,8 @@ def main():
         child = add_child()
         profiles.insert(-1, child)
         chosen = choose_child(profiles)
-    story = generate_story(profiles[chosen])
+    chosen_story = choose_story(profiles[chosen])
+    story = generate_story(profiles[chosen], chosen_story)
     print(tr.fill(story, 70))
 
 

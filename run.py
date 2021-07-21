@@ -8,7 +8,7 @@ class ChildInfo:
     """
 
     def __init__(self,
-                 name, friend, color, food, animal, sport, dislike_food, sex):
+                 name, friend, color, food, animal, sport, disliked_food, sex):
         # instance attribute
         self.name = name
         self.friend = friend
@@ -16,7 +16,7 @@ class ChildInfo:
         self.food = food
         self.animal = animal
         self.sport = sport
-        self.dislike_food = dislike_food
+        self.disliked_food = disliked_food
         self.sex = sex
 
     def make_dictionary(self):
@@ -31,7 +31,7 @@ class ChildInfo:
             'food': self.food,
             'animal': self.animal,
             'sport': self.sport,
-            'dislike_food': self.dislike_food,
+            'disliked-food': self.disliked_food,
             'sex': self.sex
         }
         return child_dict
@@ -80,16 +80,17 @@ def add_child():
     Gets user input for child info
     returns child dictionary
     """
-    name = input('Please enter your childs name:\n')
-    friend = input('Please enter your childs best friends name:\n')
+    name = input('Please enter your childs name:\n').capitalize()
+    friend = input(
+        'Please enter your childs best friends name:\n').capitalize()
     color = pick_color()
     food = input('Please enter your childs favourite food:\n')
     animal = input('Please enter your childs favourite animal: \n')
     sport = input('Please enter your childs favourite team sport: \n')
-    dislike_food = input('Please enter a food your child dislikes: \n')
+    disliked_food = input('Please enter a food your child dislikes: \n')
     sex = input('Is your child male or female? Please enter f\\m: \n')
     child = ChildInfo(
-        name, friend, color, food, animal, sport, dislike_food, sex)
+        name, friend, color, food, animal, sport, disliked_food, sex)
     return child.make_dictionary()
 
 

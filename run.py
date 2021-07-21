@@ -1,4 +1,5 @@
 import textwrap as tr
+import config
 
 
 class ChildInfo:
@@ -86,7 +87,7 @@ def add_child():
     animal = input('Please enter your childs favourite animal: \n')
     sport = input('Please enter your childs favourite team sport: \n')
     dislike_food = input('Please enter a food your child dislikes: \n')
-    sex = input('Is your child male or female? Please enter f/m: \n')
+    sex = input('Is your child male or female? Please enter f\\m: \n')
     child = ChildInfo(
         name, friend, color, food, animal, sport, dislike_food, sex)
     return child.make_dictionary()
@@ -127,6 +128,24 @@ def generate_story(child):
         story = f.read()
     custom_story = story.format(**child)
     return custom_story
+
+
+def choose_story(child):
+    print('The following stories are available: ')
+
+    if child['sex'] == 'm':
+        stories = list(config.male_stories.keys())
+        for ind in range(len(stories)):
+            print(f'{ind+1}. {stories[ind]}')
+        story_num = int(input('Please pick a number: \n'))
+        return config.male_stories[stories[story_num-1]]
+
+    else:
+        stories = list(config.female_stories.keys())
+        for ind in range(len(stories)):
+            print(f'{ind+1}. {stories[ind]}')
+        story_num = int(input('Please pick a number: \n'))
+        return config.female_stories[stories[story_num-1]]
 
 
 def main():

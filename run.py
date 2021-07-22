@@ -281,6 +281,15 @@ def delete_child_option():
 
 
 def delete_child(profiles):
+    """Prints a list of names for the user to choose from and deletes the
+    chosen item from the list
+
+    Args:
+        profiles (list): list of dictionaries with child info
+
+    Returns:
+        str: returns success message
+    """
     names = []
     for child in profiles:
         names.append(child['name'])
@@ -294,7 +303,7 @@ def delete_child(profiles):
 
     del config.profiles[int(chosen)-1]
 
-    return None
+    return f'The child {names[int(chosen) - 1]} was successfully deleted'
 
 
 def main():
@@ -320,7 +329,7 @@ def main():
                     print('There are no more children to delete.')
                     break
                 else:
-                    delete_child(config.profiles)
+                    print(delete_child(config.profiles))
             break
 
 

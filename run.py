@@ -214,7 +214,8 @@ def delete_child_option():
     while True:
         print('Do you wish to delete your childs data?')
         delete = input('Please enter yes\\no: \n')
-        if validate_str_select(delete, ('YES', 'Yes', 'yes', 'NO', 'No', 'no' )):
+        if validate_str_select(delete, 
+                ('YES', 'Yes', 'yes', 'NO', 'No', 'no' )):
             break
     if delete.upper() == 'YES':
         return True
@@ -225,7 +226,16 @@ def delete_child_option():
 
 def main():
     print('Welcome to Fairy Bot!\n')
-    profiles = [{'name': 'Add new child'}]
+    profiles = [
+        {'name': 'David', 'friend': 'Roko', 'color': 'blue', 'food': 'carrots',
+        'animal': 'lion', 'sport': 'football', 'disliked-food': 'broccoli',
+        'sex': 'm'},
+        {'name': 'Laura', 'friend': 'Sophie', 'color': 'pink',
+        'food': 'chocolate', 'animal': 'dog', 'sport': 'volleyball',
+        'disliked-food': 'spinach', 'sex': 'f'},
+        {'name': 'Add new child'}
+        ]
+
     while True:
         if len(profiles) == 1:
             child = add_child()

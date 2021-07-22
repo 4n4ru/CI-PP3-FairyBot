@@ -3,7 +3,7 @@
 
 ![Mockup image](docs/mockup.jpg)
 
-[Live webpage](#)
+[Live webpage](https://pp3-fairy-bot.herokuapp.com/)
 
 ## Table of Content
 
@@ -16,24 +16,14 @@
     3. [User Stories](#user-stories)
     4. [Site Owner Stories](#site-owner-stories)
 3. [Design](#design)
-    1. [Design Choices](#design-choices)
-    2. [Colour](#colours)
-    3. [Fonts](#fonts)
-    4. [Structure](#structure)
-    5. [Flowchart](#flowchart)
+    1. [Flowchart](#flowchart)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
 6. [Testing](#validation)
-    1. [HTML Validation](#HTML-validation)
-    2. [CSS Validation](#CSS-validation)
-    3. [JavaScript Validation](#javascript-validation)
-    4. [Accessibility](#accessibility)
-    5. [Performance](#performance)
-    6. [Device testing](#performing-tests-on-various-devices)
-    7. [Browser compatibility](#browser-compatability)
-    8. [Testing user stories](#testing-user-stories)
+    1. [PEP8 validation](#pep8-validation)
+    2. [Testing user stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
     1. [EmailJS API](#emailjs-api)
@@ -58,7 +48,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 ### User Requirements and Expectations
 - Easy set up
-- Ability to delete add and delete data
+- Ability to add and delete data
 - Easy to use
 
 ### User Stories
@@ -68,16 +58,10 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 4. As a user, I want to be able to delete info about my child
 
 ### Site Owner Stories
+5. As a site owner, I want the user to get feedback in case of wrong input
+6. As a site owner, I want the user to be able to run the app again and again
 
 ## Design
-
-### Design Choices
-
-### Colour
-
-### Fonts
-
-### Structure
 
 ### Flowchart
 <details><summary>Flowchart</summary>
@@ -89,7 +73,6 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 ### Languages
 - Python 3
 
-
 ### Frameworks & Tools
 - diagrams<span>.</span>net - to create a flow chart
 
@@ -97,26 +80,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 ## Validation
 
-### HTML Validation
-
-
-### CSS Validation
-
-
-### JavaScript Validation
-
-
-### Accessibility
-
-
-### Performance 
-
-
-### Performing tests on various devices 
-
-
-### Browser Compatability
-
+### PEP8 validation
 
 ### Testing user stories
 
@@ -156,6 +120,7 @@ You can clone the repository by following these steps:
 
 ## Credits
 The app was inspired by Storpie - Bedtime stories and lullabies for kids by Zia produkcija d.o.o. android app
+The stories within the app were modified from the book "365 Stories and Rhymes" by various authors.
 
 ### Media
 

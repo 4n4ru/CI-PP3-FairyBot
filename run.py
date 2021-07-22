@@ -113,7 +113,7 @@ def add_child():
             break
     while True:
         sex = input('Is your child male or female? Please enter f\\m: \n')
-        if validate_sex_input(sex):
+        if validate_str_select(sex, ('F', 'f', 'M', 'm')):
             break
 
     child = ChildInfo(
@@ -129,11 +129,13 @@ def validate_str_input(user_input):
         return False
     return True
 
-def validate_sex_input(sex):
-    if sex not in ('f', 'F', 'm', 'M'):
+
+def validate_str_select(sex, answer_set):
+    if sex not in answer_set:
         print('Invalid input, m or f expected. Please try again.')
         return False
     return True
+
 
 def choose_child(profiles):
     """
@@ -224,5 +226,7 @@ def main():
         print(tr.fill(story, 70))
         if new_story():
             continue
+        else:
+            break
 
 main()

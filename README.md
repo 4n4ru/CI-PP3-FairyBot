@@ -15,7 +15,7 @@
     2. [User Requirements and Expectations](#user-requirements-and-expectations)
     3. [User Stories](#user-stories)
     4. [Site Owner Stories](#site-owner-stories)
-3. [Design](#design)
+3. [Technical Design](#technical-design)
     1. [Flowchart](#flowchart)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
@@ -61,7 +61,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 5. As a site owner, I want the user to get feedback in case of wrong input
 6. As a site owner, I want the user to be able to run the app again and again
 
-## Design
+## Technical Design
 
 ### Flowchart
 <details><summary>Flowchart</summary>

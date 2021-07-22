@@ -138,7 +138,7 @@ def add_child():
 
 
 def validate_str_input(user_input):
-    """Checks if the user input is a valid string with a minimum length of 2 
+    """Checks if the user input is a valid string with a minimum length of 2
     characters
 
     Args:
@@ -155,8 +155,17 @@ def validate_str_input(user_input):
     return True
 
 
-def validate_str_select(sex, answer_set):
-    if sex not in answer_set:
+def validate_str_select(user_input, answer_set):
+    """Checks if the user input is in a given answer set
+
+    Args:
+        user_input (string): input provided by the user
+        answer_set (tuple): a set containing all the allowed answers
+
+    Returns:
+        bolean: False if the user input is not in the given set, true otherwise
+    """
+    if user_input not in answer_set:
         print('Invalid input. Please try again.')
         return False
     return True

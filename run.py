@@ -19,7 +19,7 @@ class ChildInfo:
         self.disliked_food = disliked_food
         self.sex = sex
 
-    def make_dictionary(self):
+    def make_dictionary(self) -> dict:
         """Makes a dictionary from the child info
 
         Returns:
@@ -38,7 +38,7 @@ class ChildInfo:
         return child_dict
 
 
-def pick_color():
+def pick_color() -> str:
     """Lets the user pick a color from a list printed to the console
 
     Returns:
@@ -64,7 +64,7 @@ def pick_color():
         return 'orange'
 
 
-def validate_num_input(user_input, max_num):
+def validate_num_input(user_input, max_num) -> bool:
     """Checks if the user input is a number between 1 and max_numd
 
     Args:
@@ -89,7 +89,7 @@ def validate_num_input(user_input, max_num):
     return True
 
 
-def add_child():
+def add_child() -> dict:
     """Promts for user input in order to create a child profile
 
     Returns:
@@ -137,7 +137,7 @@ def add_child():
     return child.make_dictionary()
 
 
-def validate_str_input(user_input):
+def validate_str_input(user_input) -> bool:
     """Checks if the user input is a valid string with a minimum length of 2
     characters
 
@@ -155,7 +155,7 @@ def validate_str_input(user_input):
     return True
 
 
-def validate_str_select(user_input, answer_set):
+def validate_str_select(user_input, answer_set) -> bool:
     """Checks if the user input is in a given answer set
 
     Args:
@@ -171,7 +171,7 @@ def validate_str_select(user_input, answer_set):
     return True
 
 
-def choose_child(profiles):
+def choose_child(profiles) -> int:
     """Prints a list of names to the console and lets the user pick one
 
     Args:
@@ -195,7 +195,7 @@ def choose_child(profiles):
     return ind
 
 
-def generate_story(child, story):
+def generate_story(child, story) -> str:
     """Reads a string from the story path and replaces placeholder keys from
     with values from the child dictionary
 
@@ -211,7 +211,7 @@ def generate_story(child, story):
     return custom_story
 
 
-def choose_story(child):
+def choose_story(child) -> str:
     """Prints a list of stories to the console and lets the user pick one
 
     Args:
@@ -245,7 +245,7 @@ def choose_story(child):
         return config.female_stories[stories[story_num-1]]
 
 
-def new_story():
+def new_story() -> bool:
     """Let's the user choose if another story shoud be displayed
 
     Returns:
@@ -262,7 +262,7 @@ def new_story():
         return False
 
 
-def delete_child_option():
+def delete_child_option() -> bool:
     """Let's the user choose if child data should be deleted
 
     Returns:
@@ -280,7 +280,7 @@ def delete_child_option():
         return False
 
 
-def delete_child(profiles):
+def delete_child(profiles) -> str:
     """Prints a list of names for the user to choose from and deletes the
     chosen item from the list
 

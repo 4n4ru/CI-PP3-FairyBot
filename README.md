@@ -119,11 +119,12 @@ You can clone the repository by following these steps:
 
 
 ## Credits
-The app was inspired by Storpie - Bedtime stories and lullabies for kids by Zia produkcija d.o.o. android app
-The stories within the app were modified from the book "365 Stories and Rhymes" by various authors.
+- The app was inspired by Storpie - Bedtime stories and lullabies for kids by Zia produkcija d.o.o. android app
+- The stories within the app were modified from the book "365 Stories and Rhymes" by various authors.
 
 ### Media
-ASCII art book was taken from https://www.asciiart.eu/books/books
+- ASCII art book was taken from https://www.asciiart.eu/books/books
+- The Icon at the top of the page made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 ### Code
 

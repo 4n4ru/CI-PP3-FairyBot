@@ -22,3 +22,14 @@ female_stories = {
     'The Three Little Pigs':
         'stories/female-main-character/the-three-little-pigs.txt'
 }
+
+ascii_book = """
+               __..._   _...__
+          _..-"      `Y`      "-._
+         \ Once upon |           /
+          \\  a time..|          //
+          \\\         |         ///
+           \\\ _..---.|.---.._ ///
+        jgs \\`_..---.Y.---.._`//
+             '`               `'
+             """

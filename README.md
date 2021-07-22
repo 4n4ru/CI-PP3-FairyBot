@@ -123,7 +123,7 @@ The app was inspired by Storpie - Bedtime stories and lullabies for kids by Zia 
 The stories within the app were modified from the book "365 Stories and Rhymes" by various authors.
 
 ### Media
-
+ASCII art book was taken from https://www.asciiart.eu/books/books
 
 ### Code
 

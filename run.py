@@ -308,6 +308,8 @@ def delete_child(profiles):
 
 def main():
     print('Welcome to Fairy Bot!\n')
+    print(config.ascii_book)
+    print('\n')
 
     while True:
         if len(config.profiles) == 1:

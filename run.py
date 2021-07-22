@@ -246,6 +246,11 @@ def choose_story(child):
 
 
 def new_story():
+    """Let's the user choose if another story shoud be displayed
+
+    Returns:
+        bool: True if another story is required, False otherwise
+    """
     while True:
         print('Do you wish to read another story?')
         new = input('Please enter yes\\no: \n')
@@ -258,6 +263,11 @@ def new_story():
 
 
 def delete_child_option():
+    """Let's the user choose if child data should be deleted
+
+    Returns:
+        bool: True if data should be deleted, False otherwise
+    """
     while True:
         print('Do you wish to delete your childs data?')
         delete = input('Please enter yes\\no: \n')

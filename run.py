@@ -111,8 +111,10 @@ def add_child():
         disliked_food = input('Please enter a food your child dislikes: \n')
         if validate_str_input(disliked_food):
             break
-
-    sex = input('Is your child male or female? Please enter f\\m: \n')
+    while True:
+        sex = input('Is your child male or female? Please enter f\\m: \n')
+        if validate_sex_input(sex):
+            break
 
     child = ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)
@@ -127,6 +129,11 @@ def validate_str_input(user_input):
         return False
     return True
 
+def validate_sex_input(sex):
+    if sex not in ('f', 'F', 'm', 'M'):
+        print('Invalid input, m or f expected. Please try again.')
+        return False
+    return True
 
 def choose_child(profiles):
     """

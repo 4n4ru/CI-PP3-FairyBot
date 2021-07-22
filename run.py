@@ -331,7 +331,7 @@ def main():
                 else:
                     print(delete_child(config.profiles))
             break
-    
+
     print('Thank you for using the Fairy Bot app. If you want to restart it'
           'press the Run Fairy Bot button.')
 

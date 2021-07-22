@@ -88,9 +88,10 @@ def validate_num_input(user_input, max_num):
 
 
 def add_child():
-    """
-    Gets user input for child info
-    returns child dictionary
+    """Promts for user input in order to create a child profile
+
+    Returns:
+        dict: info about the child
     """
     while True:
         name = input('Please enter your childs name:\n').capitalize()

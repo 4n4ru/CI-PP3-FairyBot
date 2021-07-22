@@ -63,6 +63,19 @@ def pick_color():
 
 
 def validate_num_input(user_input, max_num):
+    """Checks if the user input is a number between 1 and max_numd
+
+    Args:
+        user_input (string): input provided by the user
+        max_num (int): maximum allowed number for the user input
+
+    Raises:
+        ValueError: Raises an error if the number is out of range.
+
+    Returns:
+        boolean: False if an error was rised, true otherwise
+    """
+
     try:
         num = int(user_input)
         if num < 1 or num > max_num:
@@ -84,7 +97,7 @@ def add_child():
         if validate_str_input(name):
             break
 
-    while True:        
+    while True:
         friend = input(
             'Please enter your childs best friends name:\n').capitalize()
         if validate_str_input(friend):
@@ -203,19 +216,20 @@ def new_story():
     while True:
         print('Do you wish to read another story?')
         new = input('Please enter yes\\no: \n')
-        if validate_str_select(new, ('YES', 'Yes', 'yes', 'NO', 'No', 'no' )):
+        if validate_str_select(new, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
             break
     if new.upper() == 'YES':
         return True
     else:
         return False
 
+
 def delete_child_option():
     while True:
         print('Do you wish to delete your childs data?')
         delete = input('Please enter yes\\no: \n')
-        if validate_str_select(delete, 
-                ('YES', 'Yes', 'yes', 'NO', 'No', 'no' )):
+        if validate_str_select(
+                delete, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
             break
     if delete.upper() == 'YES':
         return True
@@ -234,7 +248,7 @@ def delete_child(profiles):
         chosen = input('please select a number: \n')
         if validate_num_input(chosen, len(names)-1):
             break
-    
+
     del config.profiles[int(chosen)-1]
 
     return None
@@ -265,5 +279,6 @@ def main():
                 else:
                     delete_child(config.profiles)
             break
+
 
 main()

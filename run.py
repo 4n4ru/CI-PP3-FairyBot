@@ -65,7 +65,7 @@ def pick_color():
 def validate_num_input(user_input, max_num):
     try:
         num = int(user_input)
-        if num < 1 or num > 4:
+        if num < 1 or num > max_num:
             raise ValueError(
                 f'This should be a number between 1 and {max_num}!')
     except ValueError as e:
@@ -101,21 +101,16 @@ def choose_child(profiles):
     names = []
     for child in profiles:
         names.append(child['name'])
-
     while True:
         print('Please choose the child the story should be personalized for: ')
         for ind in range(len(names)):
             print(f'{ind+1}. {names[ind]}')
-        try:
-            chosen = int(input('Please select a number: \n'))
-            if chosen < 1 or chosen > len(names):
-                raise ValueError(
-                    f'This should be a number between 1 and {len(names)}!')
-            else:
-                break
-        except ValueError as e:
-            print(f'Invalid data: {e}, please try again.\n')
-    return chosen - 1
+        chosen = input('please select a number: \n')
+        if validate_num_input(chosen, len(names)):
+            break
+
+    ind = int(chosen) - 1
+    return ind
 
 
 def generate_story(child, story):

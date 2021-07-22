@@ -196,10 +196,14 @@ def choose_child(profiles):
 
 
 def generate_story(child, story):
-    """
-    Generates the custom story using a dictionary with child info by replacing
-    placeholder text
-    returns custom story
+    """Reads a string from the story path and replaces placeholder keys from
+    with values from the child dictionary
+
+    Args:
+        child (dict): dictionary
+        story (str): filepart to the choosen story
+    Returns:
+        str: A custom story filled with info from the child dictionary
     """
     with open(story) as f:
         story = f.read()

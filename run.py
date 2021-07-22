@@ -48,14 +48,10 @@ def pick_color():
         print('2. Pink')
         print('3. Yellow')
         print('4. Orange')
-        try:
-            color = int(input('Enter a number: \n'))
-            if color < 1 or color > 4:
-                raise ValueError('This should be a number between 1 and 7!')
-            else:
-                break
-        except ValueError as e:
-            print(f'Invalid data: {e}, please try again.\n')
+        color = input('Enter a number: \n')
+        if validate_num_input(color, 4):
+            break
+        
     if color == 1:
         return 'blue'
     elif color == 2:
@@ -64,6 +60,17 @@ def pick_color():
         return 'yellow'
     elif color == 4:
         return 'orange'
+
+
+def validate_num_input(user_input, max_num):
+    try:
+        num = int(user_input)
+        if num < 1 or num > 4:
+            raise ValueError('This should be a number between 1 and 7!')
+    except ValueError as e:
+        print(f'Invalid data: {e}, please try again.\n')
+        return False
+    return True
 
 
 def add_child():
@@ -123,6 +130,10 @@ def generate_story(child, story):
 
 
 def choose_story(child):
+    """
+    Prints out a list of available stories
+    Retruns file path of selected story
+    """
     print('The following stories are available: ')
 
     if child['sex'] == 'm':

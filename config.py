@@ -1,10 +1,10 @@
 profiles = [
     {'name': 'David', 'friend': 'Roko', 'color': 'blue', 'food': 'carrots',
-    'animal': 'lion', 'sport': 'football', 'disliked-food': 'broccoli',
-    'sex': 'm'},
+     'animal': 'lion', 'sport': 'football', 'disliked-food': 'broccoli',
+     'sex': 'm'},
     {'name': 'Laura', 'friend': 'Sophie', 'color': 'pink',
-    'food': 'chocolate', 'animal': 'dog', 'sport': 'volleyball',
-    'disliked-food': 'spinach', 'sex': 'f'},
+     'food': 'chocolate', 'animal': 'dog', 'sport': 'volleyball',
+     'disliked-food': 'spinach', 'sex': 'f'},
     {'name': 'Add new child'}
     ]
 

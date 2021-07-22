@@ -79,18 +79,53 @@ def add_child():
     Gets user input for child info
     returns child dictionary
     """
-    name = input('Please enter your childs name:\n').capitalize()
-    friend = input(
-        'Please enter your childs best friends name:\n').capitalize()
+    while True:
+        name = input('Please enter your childs name:\n').capitalize()
+        if validate_str_input(name):
+            break
+
+    while True:        
+        friend = input(
+            'Please enter your childs best friends name:\n').capitalize()
+        if validate_str_input(friend):
+            break
+
     color = pick_color()
-    food = input('Please enter your childs favourite food:\n')
-    animal = input('Please enter your childs favourite animal: \n')
-    sport = input('Please enter your childs favourite team sport: \n')
-    disliked_food = input('Please enter a food your child dislikes: \n')
+
+    while True:
+        food = input('Please enter your childs favourite food:\n')
+        if validate_str_input(food):
+            break
+
+    while True:
+        animal = input('Please enter your childs favourite animal: \n')
+        if validate_str_input(animal):
+            break
+
+    while True:
+        sport = input('Please enter your childs favourite team sport: \n')
+        if validate_str_input(sport):
+            break
+
+    while True:
+        disliked_food = input('Please enter a food your child dislikes: \n')
+        if validate_str_input(disliked_food):
+            break
+
     sex = input('Is your child male or female? Please enter f\\m: \n')
+
     child = ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)
     return child.make_dictionary()
+
+
+def validate_str_input(user_input):
+    if (not user_input.isalpha()) or len(user_input) < 2:
+        print(
+            'Your input should be a single word of a minimum of 2 characters.'
+            'Please try again.')
+        return False
+    return True
 
 
 def choose_child(profiles):

@@ -132,7 +132,7 @@ def validate_str_input(user_input):
 
 def validate_str_select(sex, answer_set):
     if sex not in answer_set:
-        print('Invalid input, m or f expected. Please try again.')
+        print('Invalid input. Please try again.')
         return False
     return True
 
@@ -200,13 +200,15 @@ def choose_story(child):
 
 
 def new_story():
-    print('Do you wish to read another story?')
-    new = input('Please enter yes\\no: \n')
-    if new == 'YES':
+    while True:
+        print('Do you wish to read another story?')
+        new = input('Please enter yes\\no: \n')
+        if validate_str_select(new, ('YES', 'Yes', 'yes', 'NO', 'No', 'no' )):
+            break
+    if new.upper() == 'YES':
         return True
     else:
         return False
-
 
 
 def main():

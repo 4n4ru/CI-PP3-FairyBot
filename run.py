@@ -172,9 +172,13 @@ def validate_str_select(user_input, answer_set):
 
 
 def choose_child(profiles):
-    """
-    Ask user to choose a child from the list of childrens names
-    returns index of chosen option
+    """Prints a list of names to the console and lets the user pick one
+
+    Args:
+        profiles (list): a list containing all the child info dictionaries
+
+    Returns:
+        int: the index of the dictionary for the chosen child within the list
     """
     names = []
     for child in profiles:

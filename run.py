@@ -226,27 +226,18 @@ def delete_child_option():
 
 def main():
     print('Welcome to Fairy Bot!\n')
-    profiles = [
-        {'name': 'David', 'friend': 'Roko', 'color': 'blue', 'food': 'carrots',
-        'animal': 'lion', 'sport': 'football', 'disliked-food': 'broccoli',
-        'sex': 'm'},
-        {'name': 'Laura', 'friend': 'Sophie', 'color': 'pink',
-        'food': 'chocolate', 'animal': 'dog', 'sport': 'volleyball',
-        'disliked-food': 'spinach', 'sex': 'f'},
-        {'name': 'Add new child'}
-        ]
 
     while True:
-        if len(profiles) == 1:
+        if len(config.profiles) == 1:
             child = add_child()
-            profiles.insert(-1, child)
-        chosen = choose_child(profiles)
-        while profiles[chosen]['name'] == 'Add new child':
+            config.profiles.insert(-1, child)
+        chosen = choose_child(config.profiles)
+        while config.profiles[chosen]['name'] == 'Add new child':
             child = add_child()
-            profiles.insert(-1, child)
-            chosen = choose_child(profiles)
-        chosen_story = choose_story(profiles[chosen])
-        story = generate_story(profiles[chosen], chosen_story)
+            config.profiles.insert(-1, child)
+            chosen = choose_child(config.profiles)
+        chosen_story = choose_story(config.profiles[chosen])
+        story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         if new_story():
             continue

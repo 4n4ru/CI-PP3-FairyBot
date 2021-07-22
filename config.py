@@ -1,3 +1,13 @@
+profiles = [
+    {'name': 'David', 'friend': 'Roko', 'color': 'blue', 'food': 'carrots',
+    'animal': 'lion', 'sport': 'football', 'disliked-food': 'broccoli',
+    'sex': 'm'},
+    {'name': 'Laura', 'friend': 'Sophie', 'color': 'pink',
+    'food': 'chocolate', 'animal': 'dog', 'sport': 'volleyball',
+    'disliked-food': 'spinach', 'sex': 'f'},
+    {'name': 'Add new child'}
+    ]
+
 male_stories = {
     'A Golden Touch': 'stories/male-main-character/a-golden-touch.txt',
     'Captain Rustybeards New Rules':

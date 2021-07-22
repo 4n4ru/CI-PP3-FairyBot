@@ -134,16 +134,24 @@ def choose_story(child):
 
     if child['sex'] == 'm':
         stories = list(config.male_stories.keys())
-        for ind in range(len(stories)):
-            print(f'{ind+1}. {stories[ind]}')
-        story_num = int(input('Please pick a number: \n'))
+        while True:
+            for ind in range(len(stories)):
+                print(f'{ind+1}. {stories[ind]}')
+            story_num = input('Please pick a number: \n')
+            if validate_num_input(story_num, len(stories)):
+                break
+        story_num = int(story_num)
         return config.male_stories[stories[story_num-1]]
 
     else:
         stories = list(config.female_stories.keys())
-        for ind in range(len(stories)):
-            print(f'{ind+1}. {stories[ind]}')
-        story_num = int(input('Please pick a number: \n'))
+        while True:
+            for ind in range(len(stories)):
+                print(f'{ind+1}. {stories[ind]}')
+            story_num = input('Please pick a number: \n')
+            if validate_num_input(story_num, len(stories)):
+                break
+        story_num = int(story_num)
         return config.female_stories[stories[story_num-1]]
 
 

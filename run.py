@@ -223,6 +223,22 @@ def delete_child_option():
         return False
 
 
+def delete_child(profiles):
+    names = []
+    for child in profiles:
+        names.append(child['name'])
+    while True:
+        print('Please choose the child you wish to delete: ')
+        for ind in range(len(names)):
+            print(f'{ind+1}. {names[ind]}')
+        chosen = input('please select a number: \n')
+        if validate_num_input(chosen, len(names)-1):
+            break
+    
+    del config.profiles[int(chosen)-1]
+
+    return None
+
 
 def main():
     print('Welcome to Fairy Bot!\n')
@@ -242,8 +258,12 @@ def main():
         if new_story():
             continue
         else:
-            if delete_child_option():
-                pass
+            while delete_child_option() and len(config.profiles) > 0:
+                if len(config.profiles) == 1:
+                    print('There are no more children to delete.')
+                    break
+                else:
+                    delete_child(config.profiles)
             break
 
 main()

@@ -197,20 +197,32 @@ def choose_story(child):
         return config.female_stories[stories[story_num-1]]
 
 
+def new_story():
+    print('Do you wish to read another story?')
+    new = input('Please enter yes\\no: \n')
+    if new == 'YES':
+        return True
+    else:
+        return False
+
+
+
 def main():
     print('Welcome to Fairy Bot!\n')
     profiles = [{'name': 'Add new child'}]
-    if len(profiles) == 1:
-        child = add_child()
-        profiles.insert(-1, child)
-    chosen = choose_child(profiles)
-    while profiles[chosen]['name'] == 'Add new child':
-        child = add_child()
-        profiles.insert(-1, child)
+    while True:
+        if len(profiles) == 1:
+            child = add_child()
+            profiles.insert(-1, child)
         chosen = choose_child(profiles)
-    chosen_story = choose_story(profiles[chosen])
-    story = generate_story(profiles[chosen], chosen_story)
-    print(tr.fill(story, 70))
-
+        while profiles[chosen]['name'] == 'Add new child':
+            child = add_child()
+            profiles.insert(-1, child)
+            chosen = choose_child(profiles)
+        chosen_story = choose_story(profiles[chosen])
+        story = generate_story(profiles[chosen], chosen_story)
+        print(tr.fill(story, 70))
+        if new_story():
+            continue
 
 main()

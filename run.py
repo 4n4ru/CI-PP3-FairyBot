@@ -75,7 +75,7 @@ def validate_num_input(user_input, max_num):
         ValueError: Raises an error if the number is out of range.
 
     Returns:
-        boolean: False if an error was rised, true otherwise
+        boolean: False if an error was rised, True otherwise
     """
 
     try:
@@ -138,6 +138,15 @@ def add_child():
 
 
 def validate_str_input(user_input):
+    """Checks if the user input is a valid string with a minimum length of 2 
+    characters
+
+    Args:
+        user_input (string): input provided by the user
+
+    Returns:
+        bolean: False if the input is invalid, True otherwise
+    """
     if (not user_input.isalpha()) or len(user_input) < 2:
         print(
             'Your input should be a single word of a minimum of 2 characters.'

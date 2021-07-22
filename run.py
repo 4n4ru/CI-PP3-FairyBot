@@ -51,7 +51,7 @@ def pick_color():
         color = input('Enter a number: \n')
         if validate_num_input(color, 4):
             break
-        
+    color = int(color)
     if color == 1:
         return 'blue'
     elif color == 2:
@@ -66,7 +66,8 @@ def validate_num_input(user_input, max_num):
     try:
         num = int(user_input)
         if num < 1 or num > 4:
-            raise ValueError('This should be a number between 1 and 7!')
+            raise ValueError(
+                f'This should be a number between 1 and {max_num}!')
     except ValueError as e:
         print(f'Invalid data: {e}, please try again.\n')
         return False

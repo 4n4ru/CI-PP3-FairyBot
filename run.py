@@ -45,15 +45,12 @@ def pick_color():
     while True:
         print('Please choose your childs favorite colour:')
         print('1. Blue')
-        print('2. Green')
-        print('3. Pink')
-        print('4. Yellow')
-        print('5. Orange')
-        print('6. Red')
-        print('7. Purple')
+        print('2. Pink')
+        print('3. Yellow')
+        print('4. Orange')
         try:
             color = int(input('Enter a number: \n'))
-            if color < 1 or color > 7:
+            if color < 1 or color > 4:
                 raise ValueError('This should be a number between 1 and 7!')
             else:
                 break
@@ -62,17 +59,11 @@ def pick_color():
     if color == 1:
         return 'blue'
     elif color == 2:
-        return 'green'
-    elif color == 3:
         return 'pink'
-    elif color == 4:
+    elif color == 3:
         return 'yellow'
-    elif color == 5:
+    elif color == 4:
         return 'orange'
-    elif color == 6:
-        return 'red'
-    else:
-        return 'purple'
 
 
 def add_child():

@@ -42,7 +42,7 @@ def pick_color():
     """Lets the user pick a color from a list printed to the console
 
     Returns:
-        str: returns the choosen color as a string
+        str: returns the chosen color as a string
     """
     while True:
         print('Please choose your childs favorite colour:')
@@ -201,7 +201,7 @@ def generate_story(child, story):
 
     Args:
         child (dict): dictionary
-        story (str): filepart to the choosen story
+        story (str): filepart to the chosen story
     Returns:
         str: A custom story filled with info from the child dictionary
     """
@@ -212,9 +212,13 @@ def generate_story(child, story):
 
 
 def choose_story(child):
-    """
-    Prints out a list of available stories
-    Retruns file path of selected story
+    """Prints a list of stories to the console and lets the user pick one
+
+    Args:
+        child (dict): contains child info
+
+    Returns:
+        str: file path to the chosen story
     """
     print('The following stories are available: ')
 

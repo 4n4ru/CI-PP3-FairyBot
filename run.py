@@ -20,10 +20,11 @@ class ChildInfo:
         self.sex = sex
 
     def make_dictionary(self):
-        """
-        Creates a dictionary with child info
-        returns: dictionary
-        """
+        """Makes a dictionary from the child info
+
+        Returns:
+            dict: dictionary with child info
+        """      
         child_dict = {
             'name': self.name,
             'friend': self.friend,

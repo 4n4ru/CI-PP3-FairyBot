@@ -210,6 +210,18 @@ def new_story():
     else:
         return False
 
+def delete_child_option():
+    while True:
+        print('Do you wish to delete your childs data?')
+        delete = input('Please enter yes\\no: \n')
+        if validate_str_select(delete, ('YES', 'Yes', 'yes', 'NO', 'No', 'no' )):
+            break
+    if delete.upper() == 'YES':
+        return True
+    else:
+        return False
+
+
 
 def main():
     print('Welcome to Fairy Bot!\n')
@@ -229,6 +241,8 @@ def main():
         if new_story():
             continue
         else:
+            if delete_child_option():
+                pass
             break
 
 main()

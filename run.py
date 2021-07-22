@@ -24,7 +24,7 @@ class ChildInfo:
 
         Returns:
             dict: dictionary with child info
-        """      
+        """
         child_dict = {
             'name': self.name,
             'friend': self.friend,
@@ -39,9 +39,10 @@ class ChildInfo:
 
 
 def pick_color():
-    """
-    Gets user input for favorite color
-    returns string
+    """Lets the user pick a color from a list printed to the console
+
+    Returns:
+        string: returns the choosen color as a string
     """
     while True:
         print('Please choose your childs favorite colour:')

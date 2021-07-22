@@ -42,7 +42,7 @@ def pick_color():
     """Lets the user pick a color from a list printed to the console
 
     Returns:
-        string: returns the choosen color as a string
+        str: returns the choosen color as a string
     """
     while True:
         print('Please choose your childs favorite colour:')
@@ -68,14 +68,14 @@ def validate_num_input(user_input, max_num):
     """Checks if the user input is a number between 1 and max_numd
 
     Args:
-        user_input (string): input provided by the user
+        user_input (str): input provided by the user
         max_num (int): maximum allowed number for the user input
 
     Raises:
         ValueError: Raises an error if the number is out of range.
 
     Returns:
-        boolean: False if an error was rised, True otherwise
+        bool: False if an error was rised, True otherwise
     """
 
     try:
@@ -142,10 +142,10 @@ def validate_str_input(user_input):
     characters
 
     Args:
-        user_input (string): input provided by the user
+        user_input (str): input provided by the user
 
     Returns:
-        bolean: False if the input is invalid, True otherwise
+        bool: False if the input is invalid, True otherwise
     """
     if (not user_input.isalpha()) or len(user_input) < 2:
         print(
@@ -159,11 +159,11 @@ def validate_str_select(user_input, answer_set):
     """Checks if the user input is in a given answer set
 
     Args:
-        user_input (string): input provided by the user
+        user_input (str): input provided by the user
         answer_set (tuple): a set containing all the allowed answers
 
     Returns:
-        bolean: False if the user input is not in the given set, true otherwise
+        bool: False if the user input is not in the given set, true otherwise
     """
     if user_input not in answer_set:
         print('Invalid input. Please try again.')

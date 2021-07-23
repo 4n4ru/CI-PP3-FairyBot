@@ -1,6 +1,4 @@
-import textwrap as tr
 import config
-
 
 class ChildInfo:
     """
@@ -304,38 +302,3 @@ def delete_child(profiles) -> str:
     del config.profiles[int(chosen)-1]
 
     return f'The child {names[int(chosen) - 1]} was successfully deleted'
-
-
-def main():
-    print('Welcome to Fairy Bot!\n')
-    print(config.ascii_book)
-    print('\n')
-
-    while True:
-        if len(config.profiles) == 1:
-            child = add_child()
-            config.profiles.insert(-1, child)
-        chosen = choose_child(config.profiles)
-        while config.profiles[chosen]['name'] == 'Add new child':
-            child = add_child()
-            config.profiles.insert(-1, child)
-            chosen = choose_child(config.profiles)
-        chosen_story = choose_story(config.profiles[chosen])
-        story = generate_story(config.profiles[chosen], chosen_story)
-        print(tr.fill(story, 70))
-        if new_story():
-            continue
-        else:
-            while delete_child_option() and len(config.profiles) > 0:
-                if len(config.profiles) == 1:
-                    print('There are no more children to delete.')
-                    break
-                else:
-                    print(delete_child(config.profiles))
-            break
-
-    print('Thank you for using the Fairy Bot app. If you want to restart it'
-          'press the Run Fairy Bot button.')
-
-
-main()

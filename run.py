@@ -1,40 +1,5 @@
 import config
-
-class ChildInfo:
-    """
-    Child info class
-    """
-
-    def __init__(self,
-                 name, friend, color, food, animal, sport, disliked_food, sex):
-        # instance attribute
-        self.name = name
-        self.friend = friend
-        self.color = color
-        self.food = food
-        self.animal = animal
-        self.sport = sport
-        self.disliked_food = disliked_food
-        self.sex = sex
-
-    def make_dictionary(self) -> dict:
-        """Makes a dictionary from the child info
-
-        Returns:
-            dict: dictionary with child info
-        """
-        child_dict = {
-            'name': self.name,
-            'friend': self.friend,
-            'color': self.color,
-            'food': self.food,
-            'animal': self.animal,
-            'sport': self.sport,
-            'disliked-food': self.disliked_food,
-            'sex': self.sex
-        }
-        return child_dict
-
+import child_info
 
 def pick_color() -> str:
     """Lets the user pick a color from a list printed to the console
@@ -130,7 +95,7 @@ def add_child() -> dict:
         if validate_str_select(sex, ('F', 'f', 'M', 'm')):
             break
 
-    child = ChildInfo(
+    child = child_info.ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)
     return child.make_dictionary()
 

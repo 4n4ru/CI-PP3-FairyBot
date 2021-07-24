@@ -27,45 +27,40 @@ def pick_color() -> str:
     elif color == 4:
         return 'orange'
 
+def input_string(substring) -> str:
+    """Prompts for user input with a predefined string and a substring that is 
+    passed as an argument. The prompt is repeated until the user provides a
+    string that passes through validation.
+
+    Args:
+        substring (str): a sub string that is added to the question for the 
+        user
+
+    Returns:
+        str: returns the user input as a string
+    """
+    while True:
+        string = input(f'Please enter your childs {substring}:\n')
+        if Validation.validate_str_input(string):
+            break
+    return string
+
 
 def add_child() -> dict:
-    """Promts for user input in order to create a child profile
+    """Creates a child dictionary by calling different functions for user input
 
     Returns:
         dict: info about the child
     """
-    while True:
-        name = input('Please enter your childs name:\n').capitalize()
-        if Validation.validate_str_input(name):
-            break
 
-    while True:
-        friend = input(
-            'Please enter your childs best friends name:\n').capitalize()
-        if Validation.validate_str_input(friend):
-            break
-
+    name = input_string('name').capitalize()
+    friend = input_string('best friends name').capitalize()
     color = pick_color()
+    food = input_string('favourite food')
+    animal = input_string('favourite animal')
+    sport = input_string('favourite team sport')
+    disliked_food = input_string('least favourite food')
 
-    while True:
-        food = input('Please enter your childs favourite food:\n')
-        if Validation.validate_str_input(food):
-            break
-
-    while True:
-        animal = input('Please enter your childs favourite animal: \n')
-        if Validation.validate_str_input(animal):
-            break
-
-    while True:
-        sport = input('Please enter your childs favourite team sport: \n')
-        if Validation.validate_str_input(sport):
-            break
-
-    while True:
-        disliked_food = input('Please enter a food your child dislikes: \n')
-        if Validation.validate_str_input(disliked_food):
-            break
     while True:
         sex = input('Is your child male or female? Please enter f\\m: \n')
         if Validation.validate_str_select(sex, ('F', 'f', 'M', 'm')):

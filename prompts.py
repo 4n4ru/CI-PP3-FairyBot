@@ -14,8 +14,8 @@ NEW_STORY = 'Would you like to make a new story? Please enter yes\\no: \n'
 YES_NO_OPTIONS = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
 DELETE = 'Do you wish to delete your childs data? Please enter yes\\no: \n'
 DELETE_CHILD = 'Please choose the child you wish to delete: '
-ENTER_NUMBER = 'Enter a number: \n'
 WELCOME = 'Welcome to Fairy Bot!\n'
 NO_DELETE = 'There are no more children to delete.'
 THANK_YOU = 'Thank you for using the Fairy Bot app. If you want to restart it,\
  press the Run Fairy Bot button.'
+CHOOSE_STORY = 'The following stories are available: '

@@ -37,15 +37,8 @@ def choose_child(profiles) -> int:
     names = []
     for child in profiles:
         names.append(child['name'])
-    while True:
-        print(prompts.CHOOSE_CHILD)
-        for ind in range(len(names)):
-            print(f'{ind+1}. {names[ind]}')
-        chosen = input(prompts.SELECT_NUMBER)
-        if Validation.validate_num_input(chosen, len(names)):
-            break
-
-    ind = int(chosen) - 1
+    chosen = user_input.pick_from_list(prompts.CHOOSE_CHILD, names)
+    ind = names.index(chosen)
     return ind
 
 
@@ -74,29 +67,17 @@ def choose_story(child) -> str:
     Returns:
         str: file path to the chosen story
     """
-    print('The following stories are available: ')
-
     if child['sex'] == 'm':
         stories = list(config.male_stories.keys())
-        while True:
-            for ind in range(len(stories)):
-                print(f'{ind+1}. {stories[ind]}')
-            story_num = input(prompts.SELECT_NUMBER)
-            if Validation.validate_num_input(story_num, len(stories)):
-                break
-        story_num = int(story_num)
-        return config.male_stories[stories[story_num-1]]
+        story = user_input.pick_from_list(prompts.CHOOSE_STORY, stories)
+        story_num = stories.index(story)
+        return config.male_stories[stories[story_num]]
 
     else:
         stories = list(config.female_stories.keys())
-        while True:
-            for ind in range(len(stories)):
-                print(f'{ind+1}. {stories[ind]}')
-            story_num = input(prompts.SELECT_NUMBER)
-            if Validation.validate_num_input(story_num, len(stories)):
-                break
-        story_num = int(story_num)
-        return config.female_stories[stories[story_num-1]]
+        story = user_input.pick_from_list(prompts.CHOOSE_STORY, stories)
+        story_num = stories.index(story)
+        return config.female_stories[stories[story_num]]
 
 
 def new_story() -> bool:
@@ -139,14 +120,9 @@ def delete_child(profiles) -> str:
     names = []
     for child in profiles:
         names.append(child['name'])
-    while True:
-        print(prompts.DELETE_CHILD)
-        for ind in range(len(names)):
-            print(f'{ind+1}. {names[ind]}')
-        chosen = input(prompts.SELECT_NUMBER)
-        if Validation.validate_num_input(chosen, len(names)-1):
-            break
+    chosen = user_input.pick_from_list(prompts.DELETE_CHILD, names[:-1])
+    ind = names.index(chosen)
 
-    del config.profiles[int(chosen)-1]
-    confirm = f'The child {names[int(chosen) - 1]} was successfully deleted'
+    del config.profiles[ind]
+    confirm = f'The child {chosen} was successfully deleted'
     return confirm

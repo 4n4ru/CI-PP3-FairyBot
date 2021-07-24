@@ -15,12 +15,12 @@ def pick_from_list(prompt, list) -> str:
         print(f'{prompt}')
         for ind in range(len(list)):
             print(f'{ind+1}. {list[ind]}')
-        chosen = input(prompts.ENTER_NUMBER)
+        chosen = input(prompts.SELECT_NUMBER)
         if Validation.validate_num_input(chosen, len(list)):
             break
     chosen_ind = int(chosen) - 1
     return list[chosen_ind]
-    
+
 
 def input_string(prompt) -> str:
     """Prompts for user input with a predefined string and a substring that is 

@@ -2,8 +2,9 @@ import config
 import child_info
 from validation import Validation
 import user_input
+import prompts
 
-def input_string(substring) -> str:
+def input_string(prompt) -> str:
     """Prompts for user input with a predefined string and a substring that is 
     passed as an argument. The prompt is repeated until the user provides a
     string that passes through validation.
@@ -16,26 +17,26 @@ def input_string(substring) -> str:
         str: returns the user input as a string
     """
     while True:
-        string = input(f'Please enter your childs {substring}:\n')
+        string = input(prompt)
         if Validation.validate_str_input(string):
             break
     return string
 
 
-def select_input(prompt_text, options) -> str:
+def select_input(prompt, options) -> str:
     """Prompts the user for imput using prompt_text passed as an argument. The 
     prompt is repeated until the input validates against the options passed as
     an argument
 
     Args:
-        prompt_text (str): Prompt text for the user
+        prompt(str): Prompt text for the user
         options (tuple): contains strings for validating user input
 
     Returns:
         str: a string containing the option chosen
     """
     while True:
-        selected = input(f'{prompt_text} \n')
+        selected = input(prompt)
         if Validation.validate_str_select(selected, options):
             break
     return selected
@@ -48,17 +49,14 @@ def add_child() -> dict:
         dict: info about the child
     """
 
-    name = input_string('name').capitalize()
-    friend = input_string('best friends name').capitalize()
-    color = user_input.pick_from_list(
-        'Please choose your childs favorite colour:',
-        ['blue', 'pink', 'yellow', 'orange'])
-    food = input_string('favourite food')
-    animal = input_string('favourite animal')
-    sport = input_string('favourite team sport')
-    disliked_food = input_string('least favourite food')
-    sex = select_input('Is your child male or female? Please enter f\\m:',
-                     ('F', 'f', 'M', 'm') )
+    name = input_string(prompts.ENTER_NAME).capitalize()
+    friend = input_string(prompts.ENTER_FRIEND).capitalize()
+    color = user_input.pick_from_list(prompts.ENTER_COLOR, prompts.COLORS)
+    food = input_string(prompts.ENTER_FOOD)
+    animal = input_string(prompts.ENTER_ANIMAL)
+    sport = input_string(prompts.ENTER_SPORT)
+    disliked_food = input_string(prompts.ENTER_DISLIKED_FOOD)
+    sex = select_input(prompts.ENTER_SEX, prompts.SEX_OPTIONS)
     
     child = child_info.ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)
@@ -78,10 +76,10 @@ def choose_child(profiles) -> int:
     for child in profiles:
         names.append(child['name'])
     while True:
-        print('Please choose the child the story should be personalized for: ')
+        print(prompts.CHOOSE_CHILD)
         for ind in range(len(names)):
             print(f'{ind+1}. {names[ind]}')
-        chosen = input('please select a number: \n')
+        chosen = input(prompts.SELECT_NUMBER)
         if Validation.validate_num_input(chosen, len(names)):
             break
 
@@ -121,7 +119,7 @@ def choose_story(child) -> str:
         while True:
             for ind in range(len(stories)):
                 print(f'{ind+1}. {stories[ind]}')
-            story_num = input('Please pick a number: \n')
+            story_num = input(prompts.SELECT_NUMBER)
             if Validation.validate_num_input(story_num, len(stories)):
                 break
         story_num = int(story_num)
@@ -132,7 +130,7 @@ def choose_story(child) -> str:
         while True:
             for ind in range(len(stories)):
                 print(f'{ind+1}. {stories[ind]}')
-            story_num = input('Please pick a number: \n')
+            story_num = input(prompts.SELECT_NUMBER)
             if Validation.validate_num_input(story_num, len(stories)):
                 break
         story_num = int(story_num)
@@ -146,10 +144,7 @@ def new_story() -> bool:
     Returns:
         bool: True if another story is required, False otherwise
     """
-    new = select_input(
-        'Do you wish to read another story?\n'
-        'Please enter yes\\no:',
-        ('YES', 'Yes', 'yes', 'NO', 'No', 'no'))
+    new = select_input(prompts.NEW_STORY, prompts.YES_NO_OPTIONS)
     if new.upper() == 'YES':
         return True
     else:
@@ -162,10 +157,7 @@ def delete_child_option() -> bool:
     Returns:
         bool: True if data should be deleted, False otherwise
     """
-    delete = select_input(
-        'Do you wish to delete your childs data?\n'
-        'Please enter yes\\no:',
-        ('YES', 'Yes', 'yes', 'NO', 'No', 'no'))
+    delete = select_input(prompts.DELETE, prompts.YES_NO_OPTIONS)
     if delete.upper() == 'YES':
         return True
     else:
@@ -186,13 +178,13 @@ def delete_child(profiles) -> str:
     for child in profiles:
         names.append(child['name'])
     while True:
-        print('Please choose the child you wish to delete: ')
+        print(prompts.DELETE_CHILD)
         for ind in range(len(names)):
             print(f'{ind+1}. {names[ind]}')
-        chosen = input('please select a number: \n')
+        chosen = input(prompts.SELECT_NUMBER)
         if Validation.validate_num_input(chosen, len(names)-1):
             break
 
     del config.profiles[int(chosen)-1]
-
-    return f'The child {names[int(chosen) - 1]} was successfully deleted'
+    confirm = f'The child {names[int(chosen) - 1]} was successfully deleted'
+    return confirm

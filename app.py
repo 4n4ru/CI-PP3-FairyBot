@@ -1,10 +1,11 @@
 import textwrap as tr
+import prompts
 
 def main():
     import run
     import config
 
-    print('Welcome to Fairy Bot!\n')
+    print(prompts.WELCOME)
     print(config.ascii_book)
     print('\n')
 
@@ -26,14 +27,13 @@ def main():
         else:
             while run.delete_child_option() and len(config.profiles) > 0:
                 if len(config.profiles) == 1:
-                    print('There are no more children to delete.')
+                    print(prompts.NO_DELETE)
                     break
                 else:
                     print(run.delete_child(config.profiles))
             break
 
-    print('Thank you for using the Fairy Bot app. If you want to restart it'
-        'press the Run Fairy Bot button.')
+    print(prompts.THANK_YOU)
 
 if __name__ == "__main__":
     main()

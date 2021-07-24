@@ -85,9 +85,9 @@ def story():
             config.profiles.insert(-1, child)
             chosen = choose_child(config.profiles)
         if config.profiles[chosen].sex == 'm':
-            chosen_story = choose_story(config.male_stories.keys())
+            chosen_story = choose_story(list(config.male_stories.keys()))
         else:
-            chosen_story = choose_story(config.female_stories.keys())
+            chosen_story = choose_story(list(config.female_stories.keys()))
         story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         

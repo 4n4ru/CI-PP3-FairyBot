@@ -35,6 +35,5 @@ def main():
     print('Thank you for using the Fairy Bot app. If you want to restart it'
         'press the Run Fairy Bot button.')
 
-
-
-main()
+if __name__ == "__main__":
+    main()

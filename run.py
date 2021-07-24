@@ -4,34 +4,6 @@ from validation import Validation
 import user_input
 import prompts
 
-
-
-
-
-
-
-def choose_story(child) -> str:
-    """Prints a list of stories to the console and lets the user pick one
-
-    Args:
-        child (dict): contains child info
-
-    Returns:
-        str: file path to the chosen story
-    """
-    if child.sex == 'm':
-        stories = list(config.male_stories.keys())
-        story = user_input.pick_from_list(prompts.CHOOSE_STORY, stories)
-        story_num = stories.index(story)
-        return config.male_stories[stories[story_num]]
-
-    else:
-        stories = list(config.female_stories.keys())
-        story = user_input.pick_from_list(prompts.CHOOSE_STORY, stories)
-        story_num = stories.index(story)
-        return config.female_stories[stories[story_num]]
-
-
 def new_story() -> bool:
     """Let's the user choose if another story shoud be displayed by calling the
     select_input function

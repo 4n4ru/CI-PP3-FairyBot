@@ -162,16 +162,16 @@ def choose_story(child) -> str:
 
 
 def new_story() -> bool:
-    """Let's the user choose if another story shoud be displayed
+    """Let's the user choose if another story shoud be displayed by calling the
+    select_input function
 
     Returns:
         bool: True if another story is required, False otherwise
     """
-    while True:
-        print('Do you wish to read another story?')
-        new = input('Please enter yes\\no: \n')
-        if Validation.validate_str_select(new, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
-            break
+    new = select_input(
+        'Do you wish to read another story?\n'
+        'Please enter yes\\no:',
+        ('YES', 'Yes', 'yes', 'NO', 'No', 'no'))
     if new.upper() == 'YES':
         return True
     else:

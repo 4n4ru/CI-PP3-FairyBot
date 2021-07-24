@@ -1,5 +1,5 @@
 import config
-import child_info
+from child_info import ChildInfo
 import textwrap as tr
 import prompts
 import user_input
@@ -81,7 +81,7 @@ def story():
     while True:
         chosen = choose_child(config.profiles)
         while chosen == len(config.profiles):
-            child = child_info.ChildInfo.add_child()
+            child = ChildInfo.add_child()
             config.profiles.insert(-1, child)
             chosen = choose_child(config.profiles)
         if config.profiles[chosen].sex == 'm':
@@ -99,7 +99,7 @@ def story():
                     print(prompts.NO_DELETE)
                     break
                 else:
-                    print(run.delete_child(config.profiles))
+                    print(ChildInfo.delete_child(config.profiles))
             break
 
 story()

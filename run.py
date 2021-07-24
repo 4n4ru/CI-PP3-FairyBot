@@ -4,44 +4,6 @@ from validation import Validation
 import user_input
 import prompts
 
-def input_string(prompt) -> str:
-    """Prompts for user input with a predefined string and a substring that is 
-    passed as an argument. The prompt is repeated until the user provides a
-    string that passes through validation.
-
-    Args:
-        substring (str): a sub string that is added to the question for the 
-        user
-
-    Returns:
-        str: returns the user input as a string
-    """
-    while True:
-        string = input(prompt)
-        if Validation.validate_str_input(string):
-            break
-    return string
-
-
-def select_input(prompt, options) -> str:
-    """Prompts the user for imput using prompt_text passed as an argument. The 
-    prompt is repeated until the input validates against the options passed as
-    an argument
-
-    Args:
-        prompt(str): Prompt text for the user
-        options (tuple): contains strings for validating user input
-
-    Returns:
-        str: a string containing the option chosen
-    """
-    while True:
-        selected = input(prompt)
-        if Validation.validate_str_select(selected, options):
-            break
-    return selected
-
-
 def add_child() -> dict:
     """Creates a child dictionary by calling different functions for user input
 
@@ -49,14 +11,14 @@ def add_child() -> dict:
         dict: info about the child
     """
 
-    name = input_string(prompts.ENTER_NAME).capitalize()
-    friend = input_string(prompts.ENTER_FRIEND).capitalize()
+    name = user_input.input_string(prompts.ENTER_NAME).capitalize()
+    friend = user_input.input_string(prompts.ENTER_FRIEND).capitalize()
     color = user_input.pick_from_list(prompts.ENTER_COLOR, prompts.COLORS)
-    food = input_string(prompts.ENTER_FOOD)
-    animal = input_string(prompts.ENTER_ANIMAL)
-    sport = input_string(prompts.ENTER_SPORT)
-    disliked_food = input_string(prompts.ENTER_DISLIKED_FOOD)
-    sex = select_input(prompts.ENTER_SEX, prompts.SEX_OPTIONS)
+    food = user_input.input_string(prompts.ENTER_FOOD)
+    animal = user_input.input_string(prompts.ENTER_ANIMAL)
+    sport = user_input.input_string(prompts.ENTER_SPORT)
+    disliked_food = user_input.input_string(prompts.ENTER_DISLIKED_FOOD)
+    sex = user_input.select_input(prompts.ENTER_SEX, prompts.SEX_OPTIONS)
     
     child = child_info.ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)
@@ -144,7 +106,7 @@ def new_story() -> bool:
     Returns:
         bool: True if another story is required, False otherwise
     """
-    new = select_input(prompts.NEW_STORY, prompts.YES_NO_OPTIONS)
+    new = user_input.select_input(prompts.NEW_STORY, prompts.YES_NO_OPTIONS)
     if new.upper() == 'YES':
         return True
     else:
@@ -157,7 +119,7 @@ def delete_child_option() -> bool:
     Returns:
         bool: True if data should be deleted, False otherwise
     """
-    delete = select_input(prompts.DELETE, prompts.YES_NO_OPTIONS)
+    delete = user_input.select_input(prompts.DELETE, prompts.YES_NO_OPTIONS)
     if delete.upper() == 'YES':
         return True
     else:

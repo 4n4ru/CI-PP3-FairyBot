@@ -20,3 +20,41 @@ def pick_from_list(prompt, list) -> str:
             break
     chosen_ind = int(chosen) - 1
     return list[chosen_ind]
+    
+
+def input_string(prompt) -> str:
+    """Prompts for user input with a predefined string and a substring that is 
+    passed as an argument. The prompt is repeated until the user provides a
+    string that passes through validation.
+
+    Args:
+        substring (str): a sub string that is added to the question for the 
+        user
+
+    Returns:
+        str: returns the user input as a string
+    """
+    while True:
+        string = input(prompt)
+        if Validation.validate_str_input(string):
+            break
+    return string
+
+
+def select_input(prompt, options) -> str:
+    """Prompts the user for imput using prompt_text passed as an argument. The 
+    prompt is repeated until the input validates against the options passed as
+    an argument
+
+    Args:
+        prompt(str): Prompt text for the user
+        options (tuple): contains strings for validating user input
+
+    Returns:
+        str: a string containing the option chosen
+    """
+    while True:
+        selected = input(prompt)
+        if Validation.validate_str_select(selected, options):
+            break
+    return selected

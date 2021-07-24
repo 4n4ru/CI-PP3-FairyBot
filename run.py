@@ -46,18 +46,23 @@ def input_string(substring) -> str:
     return string
 
 
-def select_sex() -> str:
-    """Asks for user input about the sex of the child. The input should be f or
-    m. The request is repeated until valid input is provided.
+def select_input(prompt_text, options) -> str:
+    """Prompts the user for imput using prompt_text passed as an argument. The 
+    prompt is repeated until the input validates against the options passed as
+    an argument
+
+    Args:
+        prompt_text (str): Prompt text for the user
+        options (tuple): contains strings for validating user input
 
     Returns:
-        str: the sex of the child
+        str: a string containing the option chosen
     """
     while True:
-        sex = input('Is your child male or female? Please enter f\\m: \n')
-        if Validation.validate_str_select(sex, ('F', 'f', 'M', 'm')):
+        selected = input(f'{prompt_text} \n')
+        if Validation.validate_str_select(selected, options):
             break
-    return sex
+    return selected
 
 
 def add_child() -> dict:
@@ -74,7 +79,8 @@ def add_child() -> dict:
     animal = input_string('favourite animal')
     sport = input_string('favourite team sport')
     disliked_food = input_string('least favourite food')
-    sex = select_sex()
+    sex = select_input('Is your child male or female? Please enter f\\m:',
+                     ('F', 'f', 'M', 'm') )
     
     child = child_info.ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)

@@ -4,6 +4,18 @@ import textwrap as tr
 import prompts
 import user_input
 
+def delete_child_option() -> bool:
+    """Let's the user choose if child data should be deleted
+
+    Returns:
+        bool: True if data should be deleted, False otherwise
+    """
+    delete = user_input.select_input(prompts.DELETE, prompts.YES_NO_OPTIONS)
+    if delete.upper() == 'YES':
+        return True
+    else:
+        return False
+
 def new_story() -> bool:
     """Let's the user choose if another story shoud be displayed by calling the
     select_input function
@@ -82,7 +94,7 @@ def story():
         if new_story():
             continue
         else:
-            while run.delete_child_option() and len(config.profiles) > 0:
+            while delete_child_option() and len(config.profiles) > 0:
                 if len(config.profiles) == 1:
                     print(prompts.NO_DELETE)
                     break

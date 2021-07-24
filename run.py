@@ -7,19 +7,6 @@ import prompts
 
 
 
-def delete_child_option() -> bool:
-    """Let's the user choose if child data should be deleted
-
-    Returns:
-        bool: True if data should be deleted, False otherwise
-    """
-    delete = user_input.select_input(prompts.DELETE, prompts.YES_NO_OPTIONS)
-    if delete.upper() == 'YES':
-        return True
-    else:
-        return False
-
-
 def delete_child(profiles) -> str:
     """Prints a list of names for the user to choose from and deletes the
     chosen item from the list

@@ -29,7 +29,7 @@ def new_story() -> bool:
     else:
         return False
 
-def choose_story(stories) -> str:
+def choose_story(story_dict) -> str:
     """Prints a list of stories to the console and lets the user pick one
 
     Args:
@@ -38,9 +38,9 @@ def choose_story(stories) -> str:
     Returns:
         str: file path to the chosen story
     """
-    story = user_input.pick_from_list(prompts.CHOOSE_STORY, stories)
-    story_num = stories.index(story)
-    return config.male_stories[stories[story_num]]
+    story = user_input.pick_from_list(
+        prompts.CHOOSE_STORY, list(story_dict.keys()))
+    return story_dict[story]
 
 
 def generate_story(child, story) -> str:
@@ -85,9 +85,9 @@ def story():
             config.profiles.insert(-1, child)
             chosen = choose_child(config.profiles)
         if config.profiles[chosen].sex == 'm':
-            chosen_story = choose_story(list(config.male_stories.keys()))
+            chosen_story = choose_story(config.male_stories)
         else:
-            chosen_story = choose_story(list(config.female_stories.keys()))
+            chosen_story = choose_story(config.female_stories)
         story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         

@@ -54,4 +54,4 @@ class ChildInfo:
         
         child = ChildInfo(
             name, friend, color, food, animal, sport, disliked_food, sex)
-        return child.make_dictionary()
+        return child

@@ -1,11 +1,24 @@
+from child_info import ChildInfo
+
 profiles = [
-    {'name': 'David', 'friend': 'Roko', 'color': 'blue', 'food': 'carrots',
-     'animal': 'lion', 'sport': 'football', 'disliked-food': 'broccoli',
-     'sex': 'm'},
-    {'name': 'Laura', 'friend': 'Sophie', 'color': 'pink',
-     'food': 'chocolate', 'animal': 'dog', 'sport': 'volleyball',
-     'disliked-food': 'spinach', 'sex': 'f'},
-    {'name': 'Add new child'}
+    ChildInfo(
+        'David', 
+        'Roko', 
+        'blue', 
+        'carrots', 
+        'lion', 
+        'football', 
+        'broccoli',
+        'm'),
+    ChildInfo(
+        'Laura', 
+        'Sophie', 
+        'pink', 
+        'chocolate', 
+        'dog', 
+        'volleyball',
+        'spinach',
+        'f')
     ]
 
 male_stories = {

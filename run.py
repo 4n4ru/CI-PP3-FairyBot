@@ -13,11 +13,12 @@ def choose_child(profiles) -> int:
     Returns:
         int: the index of the dictionary for the chosen child within the list
     """
-    names = []
+    options = []
     for child in profiles:
-        names.append(child['name'])
-    chosen = user_input.pick_from_list(prompts.CHOOSE_CHILD, names)
-    ind = names.index(chosen)
+        options.append(child.name)
+    options.append('Add new child')
+    chosen = user_input.pick_from_list(prompts.CHOOSE_CHILD, options)
+    ind = options.index(chosen)
     return ind
 
 
@@ -31,9 +32,10 @@ def generate_story(child, story) -> str:
     Returns:
         str: A custom story filled with info from the child dictionary
     """
+    child_dict = child.make_dictionary()
     with open(story) as f:
         story = f.read()
-    custom_story = story.format(**child)
+    custom_story = story.format(**child_dict)
     return custom_story
 
 
@@ -46,7 +48,7 @@ def choose_story(child) -> str:
     Returns:
         str: file path to the chosen story
     """
-    if child['sex'] == 'm':
+    if child.sex == 'm':
         stories = list(config.male_stories.keys())
         story = user_input.pick_from_list(prompts.CHOOSE_STORY, stories)
         story_num = stories.index(story)
@@ -98,7 +100,7 @@ def delete_child(profiles) -> str:
     """
     names = []
     for child in profiles:
-        names.append(child['name'])
+        names.append(child.name)
     chosen = user_input.pick_from_list(prompts.DELETE_CHILD, names[:-1])
     ind = names.index(chosen)
 

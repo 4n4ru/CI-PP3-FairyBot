@@ -12,7 +12,7 @@ def main():
 
     while True:
         chosen = run.choose_child(config.profiles)
-        while config.profiles[chosen]['name'] == 'Add new child':
+        while chosen == len(config.profiles):
             child = child_info.ChildInfo.add_child()
             config.profiles.insert(-1, child)
             chosen = run.choose_child(config.profiles)

@@ -4,6 +4,19 @@ import textwrap as tr
 import prompts
 import user_input
 
+def new_story() -> bool:
+    """Let's the user choose if another story shoud be displayed by calling the
+    select_input function
+
+    Returns:
+        bool: True if another story is required, False otherwise
+    """
+    new = user_input.select_input(prompts.NEW_STORY, prompts.YES_NO_OPTIONS)
+    if new.upper() == 'YES':
+        return True
+    else:
+        return False
+
 def choose_story(stories) -> str:
     """Prints a list of stories to the console and lets the user pick one
 
@@ -66,7 +79,7 @@ def story():
         story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         
-        if run.new_story():
+        if new_story():
             continue
         else:
             while run.delete_child_option() and len(config.profiles) > 0:

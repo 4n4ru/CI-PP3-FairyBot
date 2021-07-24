@@ -4,18 +4,7 @@ from validation import Validation
 import user_input
 import prompts
 
-def new_story() -> bool:
-    """Let's the user choose if another story shoud be displayed by calling the
-    select_input function
 
-    Returns:
-        bool: True if another story is required, False otherwise
-    """
-    new = user_input.select_input(prompts.NEW_STORY, prompts.YES_NO_OPTIONS)
-    if new.upper() == 'YES':
-        return True
-    else:
-        return False
 
 
 def delete_child_option() -> bool:

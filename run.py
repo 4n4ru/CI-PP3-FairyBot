@@ -4,27 +4,6 @@ from validation import Validation
 import user_input
 import prompts
 
-def add_child() -> dict:
-    """Creates a child dictionary by calling different functions for user input
-
-    Returns:
-        dict: info about the child
-    """
-
-    name = user_input.input_string(prompts.ENTER_NAME).capitalize()
-    friend = user_input.input_string(prompts.ENTER_FRIEND).capitalize()
-    color = user_input.pick_from_list(prompts.ENTER_COLOR, prompts.COLORS)
-    food = user_input.input_string(prompts.ENTER_FOOD)
-    animal = user_input.input_string(prompts.ENTER_ANIMAL)
-    sport = user_input.input_string(prompts.ENTER_SPORT)
-    disliked_food = user_input.input_string(prompts.ENTER_DISLIKED_FOOD)
-    sex = user_input.select_input(prompts.ENTER_SEX, prompts.SEX_OPTIONS)
-    
-    child = child_info.ChildInfo(
-        name, friend, color, food, animal, sport, disliked_food, sex)
-    return child.make_dictionary()
-
-
 def choose_child(profiles) -> int:
     """Prints a list of names to the console and lets the user pick one
 

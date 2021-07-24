@@ -2,8 +2,9 @@ import textwrap as tr
 import prompts
 
 def main():
-    import run
+    import child_info
     import config
+    import run
 
     print(prompts.WELCOME)
     print(config.ascii_book)
@@ -11,11 +12,11 @@ def main():
 
     while True:
         if len(config.profiles) == 1:
-            child = run.add_child()
+            child = child_info.ChildInfo.add_child()
             config.profiles.insert(-1, child)
         chosen = run.choose_child(config.profiles)
         while config.profiles[chosen]['name'] == 'Add new child':
-            child = run.add_child()
+            child = child_info.ChildInfo.add_child()
             config.profiles.insert(-1, child)
             chosen = run.choose_child(config.profiles)
         chosen_story = run.choose_story(config.profiles[chosen])

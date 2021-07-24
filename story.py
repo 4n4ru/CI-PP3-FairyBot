@@ -3,6 +3,7 @@ from child_info import ChildInfo
 import textwrap as tr
 import prompts
 import user_input
+import save_story
 
 def delete_child_option() -> bool:
     """Let's the user choose if child data should be deleted
@@ -91,6 +92,8 @@ def story():
         story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         
+        save_story.save_story(story)
+
         if new_story():
             continue
         else:

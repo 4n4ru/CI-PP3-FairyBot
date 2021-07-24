@@ -7,21 +7,7 @@ import prompts
 
 
 
-def generate_story(child, story) -> str:
-    """Reads a string from the story path and replaces placeholder keys from
-    with values from the child dictionary
 
-    Args:
-        child (dict): dictionary
-        story (str): filepart to the chosen story
-    Returns:
-        str: A custom story filled with info from the child dictionary
-    """
-    child_dict = child.make_dictionary()
-    with open(story) as f:
-        story = f.read()
-    custom_story = story.format(**child_dict)
-    return custom_story
 
 
 def choose_story(child) -> str:

@@ -5,6 +5,23 @@ import textwrap as tr
 import prompts
 import user_input
 
+def generate_story(child, story) -> str:
+    """Reads a string from the story path and replaces placeholder keys from
+    with values from the child dictionary
+
+    Args:
+        child (dict): dictionary
+        story (str): filepart to the chosen story
+    Returns:
+        str: A custom story filled with info from the child dictionary
+    """
+    child_dict = child.make_dictionary()
+    with open(story) as f:
+        story = f.read()
+    custom_story = story.format(**child_dict)
+    return custom_story
+
+
 def choose_child(profiles) -> int:
     """Prints a list of names to the console and lets the user pick one
 
@@ -22,7 +39,7 @@ def choose_child(profiles) -> int:
     ind = options.index(chosen)
     return ind
 
-def generate_story():
+def story():
     while True:
         chosen = choose_child(config.profiles)
         while chosen == len(config.profiles):
@@ -30,7 +47,7 @@ def generate_story():
             config.profiles.insert(-1, child)
             chosen = choose_child(config.profiles)
         chosen_story = run.choose_story(config.profiles[chosen])
-        story = run.generate_story(config.profiles[chosen], chosen_story)
+        story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         
         if run.new_story():
@@ -44,4 +61,4 @@ def generate_story():
                     print(run.delete_child(config.profiles))
             break
 
-generate_story()
+story()

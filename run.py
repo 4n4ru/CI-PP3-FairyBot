@@ -46,6 +46,20 @@ def input_string(substring) -> str:
     return string
 
 
+def select_sex() -> str:
+    """Asks for user input about the sex of the child. The input should be f or
+    m. The request is repeated until valid input is provided.
+
+    Returns:
+        str: the sex of the child
+    """
+    while True:
+        sex = input('Is your child male or female? Please enter f\\m: \n')
+        if Validation.validate_str_select(sex, ('F', 'f', 'M', 'm')):
+            break
+    return sex
+
+
 def add_child() -> dict:
     """Creates a child dictionary by calling different functions for user input
 
@@ -60,12 +74,8 @@ def add_child() -> dict:
     animal = input_string('favourite animal')
     sport = input_string('favourite team sport')
     disliked_food = input_string('least favourite food')
-
-    while True:
-        sex = input('Is your child male or female? Please enter f\\m: \n')
-        if Validation.validate_str_select(sex, ('F', 'f', 'M', 'm')):
-            break
-
+    sex = select_sex()
+    
     child = child_info.ChildInfo(
         name, friend, color, food, animal, sport, disliked_food, sex)
     return child.make_dictionary()

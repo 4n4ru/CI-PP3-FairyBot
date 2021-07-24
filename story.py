@@ -94,8 +94,8 @@ def story():
         if new_story():
             continue
         else:
-            while delete_child_option() and len(config.profiles) > 0:
-                if len(config.profiles) == 1:
+            while delete_child_option() and len(config.profiles) >= 0:
+                if len(config.profiles) == 0:
                     print(prompts.NO_DELETE)
                     break
                 else:

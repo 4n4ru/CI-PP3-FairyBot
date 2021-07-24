@@ -71,7 +71,7 @@ class ChildInfo:
         names = []
         for child in profiles:
             names.append(child.name)
-        chosen = user_input.pick_from_list(prompts.DELETE_CHILD, names[:-1])
+        chosen = user_input.pick_from_list(prompts.DELETE_CHILD, names)
         ind = names.index(chosen)
 
         del config.profiles[ind]

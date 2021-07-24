@@ -1,31 +1,7 @@
 import config
 import child_info
 from validation import Validation
-
-def pick_color() -> str:
-    """Lets the user pick a color from a list printed to the console
-
-    Returns:
-        str: returns the chosen color as a string
-    """
-    while True:
-        print('Please choose your childs favorite colour:')
-        print('1. Blue')
-        print('2. Pink')
-        print('3. Yellow')
-        print('4. Orange')
-        color = input('Enter a number: \n')
-        if Validation.validate_num_input(color, 4):
-            break
-    color = int(color)
-    if color == 1:
-        return 'blue'
-    elif color == 2:
-        return 'pink'
-    elif color == 3:
-        return 'yellow'
-    elif color == 4:
-        return 'orange'
+import user_input
 
 def input_string(substring) -> str:
     """Prompts for user input with a predefined string and a substring that is 
@@ -74,7 +50,9 @@ def add_child() -> dict:
 
     name = input_string('name').capitalize()
     friend = input_string('best friends name').capitalize()
-    color = pick_color()
+    color = user_input.pick_from_list(
+        'Please choose your childs favorite colour:',
+        ['blue', 'pink', 'yellow', 'orange'])
     food = input_string('favourite food')
     animal = input_string('favourite animal')
     sport = input_string('favourite team sport')

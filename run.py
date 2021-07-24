@@ -1,6 +1,6 @@
 import config
 import child_info
-import validation
+from validation import Validation
 
 def pick_color() -> str:
     """Lets the user pick a color from a list printed to the console
@@ -15,7 +15,7 @@ def pick_color() -> str:
         print('3. Yellow')
         print('4. Orange')
         color = input('Enter a number: \n')
-        if validation.validate_num_input(color, 4):
+        if Validation.validate_num_input(color, 4):
             break
     color = int(color)
     if color == 1:
@@ -36,39 +36,39 @@ def add_child() -> dict:
     """
     while True:
         name = input('Please enter your childs name:\n').capitalize()
-        if validation.validate_str_input(name):
+        if Validation.validate_str_input(name):
             break
 
     while True:
         friend = input(
             'Please enter your childs best friends name:\n').capitalize()
-        if validation.validate_str_input(friend):
+        if Validation.validate_str_input(friend):
             break
 
     color = pick_color()
 
     while True:
         food = input('Please enter your childs favourite food:\n')
-        if validation.validate_str_input(food):
+        if Validation.validate_str_input(food):
             break
 
     while True:
         animal = input('Please enter your childs favourite animal: \n')
-        if validation.validate_str_input(animal):
+        if Validation.validate_str_input(animal):
             break
 
     while True:
         sport = input('Please enter your childs favourite team sport: \n')
-        if validation.validate_str_input(sport):
+        if Validation.validate_str_input(sport):
             break
 
     while True:
         disliked_food = input('Please enter a food your child dislikes: \n')
-        if validation.validate_str_input(disliked_food):
+        if Validation.validate_str_input(disliked_food):
             break
     while True:
         sex = input('Is your child male or female? Please enter f\\m: \n')
-        if validation.validate_str_select(sex, ('F', 'f', 'M', 'm')):
+        if Validation.validate_str_select(sex, ('F', 'f', 'M', 'm')):
             break
 
     child = child_info.ChildInfo(
@@ -93,7 +93,7 @@ def choose_child(profiles) -> int:
         for ind in range(len(names)):
             print(f'{ind+1}. {names[ind]}')
         chosen = input('please select a number: \n')
-        if validation.validate_num_input(chosen, len(names)):
+        if Validation.validate_num_input(chosen, len(names)):
             break
 
     ind = int(chosen) - 1
@@ -133,7 +133,7 @@ def choose_story(child) -> str:
             for ind in range(len(stories)):
                 print(f'{ind+1}. {stories[ind]}')
             story_num = input('Please pick a number: \n')
-            if validation.validate_num_input(story_num, len(stories)):
+            if Validation.validate_num_input(story_num, len(stories)):
                 break
         story_num = int(story_num)
         return config.male_stories[stories[story_num-1]]
@@ -144,7 +144,7 @@ def choose_story(child) -> str:
             for ind in range(len(stories)):
                 print(f'{ind+1}. {stories[ind]}')
             story_num = input('Please pick a number: \n')
-            if validation.validate_num_input(story_num, len(stories)):
+            if Validation.validate_num_input(story_num, len(stories)):
                 break
         story_num = int(story_num)
         return config.female_stories[stories[story_num-1]]
@@ -159,7 +159,7 @@ def new_story() -> bool:
     while True:
         print('Do you wish to read another story?')
         new = input('Please enter yes\\no: \n')
-        if validation.validate_str_select(new, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
+        if Validation.validate_str_select(new, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
             break
     if new.upper() == 'YES':
         return True
@@ -176,7 +176,7 @@ def delete_child_option() -> bool:
     while True:
         print('Do you wish to delete your childs data?')
         delete = input('Please enter yes\\no: \n')
-        if validation.validate_str_select(
+        if Validation.validate_str_select(
                 delete, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
             break
     if delete.upper() == 'YES':
@@ -203,7 +203,7 @@ def delete_child(profiles) -> str:
         for ind in range(len(names)):
             print(f'{ind+1}. {names[ind]}')
         chosen = input('please select a number: \n')
-        if validation.validate_num_input(chosen, len(names)-1):
+        if Validation.validate_num_input(chosen, len(names)-1):
             break
 
     del config.profiles[int(chosen)-1]

@@ -184,12 +184,10 @@ def delete_child_option() -> bool:
     Returns:
         bool: True if data should be deleted, False otherwise
     """
-    while True:
-        print('Do you wish to delete your childs data?')
-        delete = input('Please enter yes\\no: \n')
-        if Validation.validate_str_select(
-                delete, ('YES', 'Yes', 'yes', 'NO', 'No', 'no')):
-            break
+    delete = select_input(
+        'Do you wish to delete your childs data?\n'
+        'Please enter yes\\no:',
+        ('YES', 'Yes', 'yes', 'NO', 'No', 'no'))
     if delete.upper() == 'YES':
         return True
     else:

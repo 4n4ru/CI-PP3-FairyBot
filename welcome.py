@@ -1,6 +1,7 @@
 import prompts
 import config
 
+
 def welcome():
     """Prints a welcome message and some ASCII art to the terminal
     """

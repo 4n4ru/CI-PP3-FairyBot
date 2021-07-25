@@ -5,6 +5,7 @@ import prompts
 import user_input
 import save_story
 
+
 def delete_child_option() -> bool:
     """Let's the user choose if child data should be deleted
 
@@ -16,6 +17,7 @@ def delete_child_option() -> bool:
         return True
     else:
         return False
+
 
 def new_story() -> bool:
     """Let's the user choose if another story shoud be displayed by calling the
@@ -29,6 +31,7 @@ def new_story() -> bool:
         return True
     else:
         return False
+
 
 def choose_story(story_dict) -> str:
     """Prints a list of stories to the console and lets the user pick one
@@ -79,6 +82,7 @@ def choose_child(profiles) -> int:
     ind = options.index(chosen)
     return ind
 
+
 def story():
     """Main function for creating a custom story.
     Lets the user choose a child, if the user chooses to add a new child the
@@ -102,7 +106,7 @@ def story():
             chosen_story = choose_story(config.female_stories)
         story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
-        
+
         save = save_story.save_story_option()
         if save:
             user_id = save_story.save_story(story)

@@ -3,20 +3,20 @@ from child_info import ChildInfo
 
 profiles = [
     ChildInfo(
-        'David', 
-        'Roko', 
-        'blue', 
-        'carrots', 
-        'lion', 
-        'football', 
+        'David',
+        'Roko',
+        'blue',
+        'carrots',
+        'lion',
+        'football',
         'broccoli',
         'm'),
     ChildInfo(
-        'Laura', 
-        'Sophie', 
-        'pink', 
-        'chocolate', 
-        'dog', 
+        'Laura',
+        'Sophie',
+        'pink',
+        'chocolate',
+        'dog',
         'volleyball',
         'spinach',
         'f')

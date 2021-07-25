@@ -27,7 +27,6 @@ class Validation:
             return False
         return True
 
-
     @staticmethod
     def validate_str_input(user_input) -> bool:
         """Checks if the user input is a valid string with a minimum length of 2
@@ -41,7 +40,8 @@ class Validation:
         """
         if (not user_input.isalpha()) or len(user_input) < 2:
             print(
-                'Your input should be a single word of a minimum of 2 characters.'
+                'Your input should be a single word of a minimum of 2'
+                'characters.'
                 'Please try again.')
             return False
         return True
@@ -55,7 +55,8 @@ class Validation:
             answer_set (tuple): a set containing all the allowed answers
 
         Returns:
-            bool: False if the user input is not in the given set, true otherwise
+            bool: False if the user input is not in the given set, true
+            otherwise
         """
         if user_input not in answer_set:
             print('Invalid input. Please try again.')

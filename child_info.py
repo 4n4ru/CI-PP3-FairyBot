@@ -2,6 +2,7 @@ import prompts
 import user_input
 import config
 
+
 class ChildInfo:
     """
     Child info class
@@ -52,7 +53,7 @@ class ChildInfo:
         sport = user_input.input_string(prompts.ENTER_SPORT)
         disliked_food = user_input.input_string(prompts.ENTER_DISLIKED_FOOD)
         sex = user_input.select_input(prompts.ENTER_SEX, prompts.SEX_OPTIONS)
-        
+
         child = ChildInfo(
             name, friend, color, food, animal, sport, disliked_food, sex)
         return child

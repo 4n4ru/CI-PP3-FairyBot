@@ -2,8 +2,9 @@ import user_input
 import prompts
 import csv
 
+
 def retrieve_story_option() -> bool:
-    """Ask user if a saved stroy should be retrieved and saves user input into 
+    """Ask user if a saved stroy should be retrieved and saves user input into
     the retrieve variable. If the answer is yes, return true, false otherwise
 
     Returns:
@@ -16,17 +17,18 @@ def retrieve_story_option() -> bool:
     else:
         return False
 
+
 def retrieve_story():
     """Promts user to input user id and prints story.
     Calls a function to ask the user if a story should be retrieved. If it
-    should, reads from the csv file and appends all rows to stories list. Asks 
-    the user for the user id until a correct user id is given. Once a correct 
+    should, reads from the csv file and appends all rows to stories list. Asks
+    the user for the user id until a correct user id is given. Once a correct
     one is give, save the story in the story variable and print it to the
     terminal
     """
     while True:
         retrieve = retrieve_story_option()
-        if retrieve == False:
+        if retrieve is False:
             break
 
         stories = []
@@ -41,11 +43,10 @@ def retrieve_story():
             for ind in range(len(stories)):
                 if stories[ind][0] == user_id:
                     user_id_found = True
-            if user_id_found == True:
+            if user_id_found:
                 story = stories[ind][1]
                 break
-        
+
         print(story)
 
 retrieve_story()
-        

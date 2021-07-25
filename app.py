@@ -1,5 +1,5 @@
 def main():
-    """imports module for welcome message, retrieveing saved story, creating 
+    """imports module for welcome message, retrieveing saved story, creating
     the story and end message
 
     Raises:
@@ -22,7 +22,7 @@ def main():
         import story
     except ImportError:
         raise ImportError('story module failed to import')
-    
+
     try:
         import end
     except ImportError:

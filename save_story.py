@@ -3,6 +3,7 @@ import prompts
 import shortuuid
 import csv
 
+
 def save_story_option() -> bool:
     """Asks the user if the last generated story should be saved for later
 
@@ -14,6 +15,7 @@ def save_story_option() -> bool:
         return True
     else:
         return False
+
 
 def save_story(story) -> str:
     """Saves story to csv file.
@@ -33,5 +35,5 @@ def save_story(story) -> str:
     with open('stories/saved-stories.csv', 'a') as f:
         w = csv.writer(f)
         w.writerow(row)
-    
+
     return user_id

@@ -1,6 +1,7 @@
 from validation import Validation
 import prompts
 
+
 def pick_from_list(prompt, list) -> str:
     """Asks the user to pick from a list.
     Prints the prompt to the terminal and the elements of the list in a ordered
@@ -26,12 +27,12 @@ def pick_from_list(prompt, list) -> str:
 
 
 def input_string(prompt) -> str:
-    """Prompts for user input with a predefined string and a substring that is 
+    """Prompts for user input with a predefined string and a substring that is
     passed as an argument. The prompt is repeated until the user provides a
     string that passes through validation.
 
     Args:
-        substring (str): a sub string that is added to the question for the 
+        substring (str): a sub string that is added to the question for the
         user
 
     Returns:
@@ -45,7 +46,7 @@ def input_string(prompt) -> str:
 
 
 def select_input(prompt, options) -> str:
-    """Prompts the user for imput using prompt_text passed as an argument. The 
+    """Prompts the user for imput using prompt_text passed as an argument. The
     prompt is repeated until the input validates against the options passed as
     an argument
 

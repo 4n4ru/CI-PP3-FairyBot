@@ -20,7 +20,7 @@ def pick_from_list(prompt, list) -> str:
         for ind in range(len(list)):
             print(f'{ind+1}. {list[ind]}')
         chosen = input(prompts.SELECT_NUMBER)
-        if Validation.validate_num_input(chosen, len(list)):
+        if Validation().validate_num_input(chosen, len(list)):
             break
     chosen_ind = int(chosen) - 1
     return list[chosen_ind]
@@ -40,7 +40,7 @@ def input_string(prompt) -> str:
     """
     while True:
         string = input(prompt)
-        if Validation.validate_str_input(string):
+        if Validation().validate_str_input(string):
             break
     return string
 
@@ -59,6 +59,6 @@ def select_input(prompt, options) -> str:
     """
     while True:
         selected = input(prompt)
-        if Validation.validate_str_select(selected, options):
+        if Validation().validate_str_select(selected, options):
             break
     return selected

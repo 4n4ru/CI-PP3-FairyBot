@@ -2,8 +2,8 @@ class Validation:
     """Contains methods for validating user input
     """
 
-    @staticmethod
-    def validate_num_input(user_input, max_num) -> bool:
+    #@staticmethod
+    def validate_num_input(self, user_input, max_num) -> bool:
         """Checks if the user input is a number between 1 and max_numd
 
         Args:
@@ -27,8 +27,8 @@ class Validation:
             return False
         return True
 
-    @staticmethod
-    def validate_str_input(user_input) -> bool:
+    #@staticmethod
+    def validate_str_input(self, user_input) -> bool:
         """Checks if the user input is a valid string with a minimum length of 2
         characters
 
@@ -46,8 +46,8 @@ class Validation:
             return False
         return True
 
-    @staticmethod
-    def validate_str_select(user_input, answer_set) -> bool:
+    #@staticmethod
+    def validate_str_select(self, user_input, answer_set) -> bool:
         """Checks if the user input is in a given answer set
 
         Args:

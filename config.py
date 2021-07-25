@@ -1,3 +1,4 @@
+# contains global variables
 from child_info import ChildInfo
 
 profiles = [

@@ -1,6 +1,7 @@
 import user_input
 import prompts
 import shortuuid
+import csv
 
 def save_story_option():
     save = user_input.select_input(prompts.SAVE_OPTION, prompts.YES_NO_OPTIONS)
@@ -14,6 +15,9 @@ def save_story(story):
     if save:
         user_id = shortuuid.uuid()[:7]
         print(user_id)
-        dict = {user_id: story}
-        with open('stories/saved-stories.csv', 'w') as f:
-            f.write(f'{dict}')
+        row = [user_id, story]
+        with open('stories/saved-stories.csv', 'a') as f:
+            w = csv.writer(f)
+            w.writerow(row)
+    
+    return user_id

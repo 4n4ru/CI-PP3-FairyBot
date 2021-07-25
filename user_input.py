@@ -2,14 +2,17 @@ from validation import Validation
 import prompts
 
 def pick_from_list(prompt, list) -> str:
-    """[summary]
+    """Asks the user to pick from a list.
+    Prints the prompt to the terminal and the elements of the list in a ordered
+    list. Asks the user to select a number, validates that the input is correct
+    and returns the chosen element from the list.
 
     Args:
-        prompt (str): [description]
-        list (list): [description]
+        prompt (str): prompt for the user to choose from the list
+        list (list): a list of options
 
     Returns:
-        str: [description]
+        str: chosen element of the list
     """
     while True:
         print(f'{prompt}')

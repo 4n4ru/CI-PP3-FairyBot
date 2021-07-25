@@ -1,7 +1,7 @@
 # Fairy Bot
 (Developer: Ana Runje)
 
-![Start screen](docs/features/start-screen.jpg)
+![Start screen](docs/features/start_screen.jpg)
 
 [Live webpage](https://pp3-fairy-bot.herokuapp.com/)
 
@@ -69,7 +69,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 ### Flowchart
 <details><summary>Flowchart</summary>
-<img src="docs/flowchart-fairy-bot.jpg">
+<img src="docs/flowchart_fairy_bot.jpg">
 </details>
 
 ## Technologies Used

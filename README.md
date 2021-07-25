@@ -1,7 +1,7 @@
 # Fairy Bot
 (Developer: Ana Runje)
 
-![Start screen](docs/features/start_screen.jpg)
+![Start screen](docs/features/feature_welcome_message.jpg)
 
 [Live webpage](https://pp3-fairy-bot.herokuapp.com/)
 
@@ -84,6 +84,19 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - Git
 
 ## Features
+
+### Welcome Message
+### Retrieve Saved Story
+### Choose Child
+### Add Child
+### Choose Story
+### Custom Story
+### Save Story
+### New Story Option
+### Delete Child
+### Thank You Message
+### User Input Validation
+
 
 ## Validation
 

@@ -1,7 +1,7 @@
 # Fairy Bot
 (Developer: Ana Runje)
 
-![Mockup image](docs/mockup.jpg)
+![Start screen](docs/features/start-screen.jpg)
 
 [Live webpage](https://pp3-fairy-bot.herokuapp.com/)
 
@@ -56,10 +56,14 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 2. As a user, I want an option to add multiple children
 3. As a user, I want to pick from a list of stories
 4. As a user, I want to be able to delete info about my child
+5. As a user, I want to be able to save a story for later
+6. As a user, I want to be able to read a saved story
 
 ### Site Owner Stories
-5. As a site owner, I want the user to get feedback in case of wrong input
-6. As a site owner, I want the user to be able to run the app again and again
+7. As a site owner, I want the user to get feedback in case of wrong input
+8. As a site owner, I want the user to be able to read multiple stories
+9. As a site owner, I want only the user who saved the story to be able to read the same. 
+
 
 ## Technical Design
 
@@ -75,6 +79,9 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 ### Frameworks & Tools
 - diagrams<span>.</span>net - to create a flow chart
+- gitHub
+- Gitpod
+- Git
 
 ## Features
 

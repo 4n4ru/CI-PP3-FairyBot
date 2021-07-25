@@ -1,4 +1,13 @@
 def main():
+    """imports module for welcome message, retrieveing saved story, creating 
+    the story and end message
+
+    Raises:
+        ImportError: if the welcome module fails to import
+        ImportError: if the retrieve_story module fails to import
+        ImportError: if the story module fails to import
+        ImportError: if the end module fails to import
+    """
     try:
         import welcome
     except ImportError:

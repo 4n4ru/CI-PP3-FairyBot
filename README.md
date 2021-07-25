@@ -101,8 +101,17 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 | ----------- | ----------- |
 
 ## Deployment
-The website was deployed using Heroku by following these steps:
-1. 
+The website was deployed using Heroku by "following these steps:
+1. Use the "pip freeze -> requiremnts.txt" comand in the terminal to save any libraries that need to be instaled in the file
+2. Log in or create a Heroku account
+3. Click the "new" button in the upper right corner and select "create new app"
+4. Choose an app name and your region and click "Create app"
+5. Go to the "settings" tab, add the python build pack and then the node.js build pack
+6. Go to the "deploy" tab and pick gitHub as a deployment method
+7. Search for a repository to connect to
+8. Click enable automatic deploys and then deploy branch
+9. Wait for the app to build and then click on the "View" link
+
 
 You can fork the repository by following these steps:
 1. Go to the GitHub repository
@@ -115,8 +124,7 @@ You can clone the repository by following these steps:
 4. Open Git Bash
 5. Change the current working directory to the one where you want the cloned directory
 6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
-7.Press Enter to create your local clone.
-
+7. Press Enter to create your local clone.
 
 ## Credits
 - The app was inspired by Storpie - Bedtime stories and lullabies for kids by Zia produkcija d.o.o. android app
@@ -124,7 +132,6 @@ You can clone the repository by following these steps:
 
 ### Media
 - ASCII art book was taken from https://www.asciiart.eu/books/books
-- The Icon at the top of the page made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 ### Code
 - code for appending rows to a csv file was modified from the following example: https://stackoverflow.com/a/37654233

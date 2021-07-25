@@ -92,7 +92,8 @@ def story():
         story = generate_story(config.profiles[chosen], chosen_story)
         print(tr.fill(story, 70))
         
-        save_story.save_story(story)
+        user_id = save_story.save_story(story)
+        print(prompts.SUCCESS_SAVE + user_id)
 
         if new_story():
             continue

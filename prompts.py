@@ -1,3 +1,5 @@
+# contains all strings that are prompted to the user
+
 ENTER_NAME = '\nPlease enter your childs name: \n'
 ENTER_FRIEND = '\nPlease enter your childs best friends name: \n'
 ENTER_COLOR = '\nPlease choose your childs favorite colour:'

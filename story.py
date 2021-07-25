@@ -34,7 +34,7 @@ def choose_story(story_dict) -> str:
     """Prints a list of stories to the console and lets the user pick one
 
     Args:
-        stories (list): a list of stories 
+        story_dict (dict): A dictionary with all the stories that are available
 
     Returns:
         str: file path to the chosen story
@@ -45,8 +45,8 @@ def choose_story(story_dict) -> str:
 
 
 def generate_story(child, story) -> str:
-    """Reads a string from the story path and replaces placeholder keys from
-    with values from the child dictionary
+    """Reads a string from the story path and replaces placeholder keys with
+    values from the child dictionary
 
     Args:
         child (dict): dictionary
@@ -62,13 +62,13 @@ def generate_story(child, story) -> str:
 
 
 def choose_child(profiles) -> int:
-    """Prints a list of names to the console and lets the user pick one
+    """Prints a list of options to the console and lets the user pick one
 
     Args:
-        profiles (list): a list containing all the child info dictionaries
+        profiles (list): a list containing all the child info objects
 
     Returns:
-        int: the index of the dictionary for the chosen child within the list
+        int: the index of the object for the chosen child within the list
     """
     options = []
     for child in profiles:
@@ -79,11 +79,21 @@ def choose_child(profiles) -> int:
     return ind
 
 def story():
+    """Main function for creating a custom story.
+    Lets the user choose a child, if the user chooses to add a new child the
+    function add_child is called. After a child is chosen, lets the user pick a
+    story depending on the child sex. Generates the story using the chosen
+    child object and story. Prints the story to the terminal. Gives the user an
+    option to save the story for later. If this is chosen the user is given a
+    user id. Asks the user if another story should be provided. Ask the user if
+    a child object should be deleted and calls a function to delete the child
+    object.
+    """
     while True:
         chosen = choose_child(config.profiles)
         while chosen == len(config.profiles):
             child = ChildInfo.add_child()
-            config.profiles.insert(-1, child)
+            config.profiles.append(child)
             chosen = choose_child(config.profiles)
         if config.profiles[chosen].sex == 'm':
             chosen_story = choose_story(config.male_stories)

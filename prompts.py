@@ -17,9 +17,12 @@ DELETE_CHILD = 'Please choose the child you wish to delete: '
 WELCOME = 'Welcome to Fairy Bot!\n'
 NO_DELETE = 'There are no more children to delete.'
 THANK_YOU = 'Thank you for using the Fairy Bot app. If you want to restart it,\
-    press the Run Fairy Bot button.'
+ press the Run Fairy Bot button.'
 CHOOSE_STORY = 'The following stories are available: '
 SAVE_OPTION = 'Do you wish to save the story for later?\
-    Please enter yes\\no: \n'
+ Please enter yes\\no: \n'
 SUCCESS_SAVE = 'The story was successfuly saved.\
-    Please note your user id to access it later: '
+ Please note your user id to access it later: '
+RETRIEVE_OPTION = 'Do you wish to retrieve a saved story?\
+ Please enter yes\\no: \n'
+ENTER_USER_ID = 'Please enter your user id: \n'

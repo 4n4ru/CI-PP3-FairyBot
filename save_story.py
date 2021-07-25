@@ -14,7 +14,6 @@ def save_story(story):
     save = save_story_option()
     if save:
         user_id = shortuuid.uuid()[:7]
-        print(user_id)
         row = [user_id, story]
         with open('stories/saved-stories.csv', 'a') as f:
             w = csv.writer(f)

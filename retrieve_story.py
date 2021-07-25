@@ -2,7 +2,7 @@ import user_input
 import prompts
 import csv
 
-def retrieve_story_option():
+def retrieve_story_option() -> bool:
     """Ask user if a saved stroy should be retrieved and saves user input into 
     the retrieve variable. If the answer is yes, return true, false otherwise
 

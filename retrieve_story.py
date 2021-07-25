@@ -3,6 +3,12 @@ import prompts
 import csv
 
 def retrieve_story_option():
+    """Ask user if a saved stroy should be retrieved and saves user input into 
+    the retrieve variable. If the answer is yes, return true, false otherwise
+
+    Returns:
+        bool: True if a saved story should be retrieved, False otherwise
+    """
     retrieve = user_input.select_input(
         prompts.RETRIEVE_OPTION, prompts.YES_NO_OPTIONS)
     if retrieve.upper() == 'YES':
@@ -11,6 +17,13 @@ def retrieve_story_option():
         return False
 
 def retrieve_story():
+    """Promts user to input user id and prints story.
+    Calls a function to ask the user if a story should be retrieved. If it
+    should, reads from the csv file and appends all rows to stories list. Asks 
+    the user for the user id until a correct user id is given. Once a correct 
+    one is give, save the story in the story variable and print it to the
+    terminal
+    """
     while True:
         retrieve = retrieve_story_option()
         if retrieve == False:

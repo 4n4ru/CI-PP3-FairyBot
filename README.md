@@ -88,6 +88,39 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 ## Validation
 
 ### PEP8 validation
+PEP8 online was used to check the code for PEP8 requirements.
+All the code passes with no errors and no warnings to show.
+
+<details><summary>app.py</summary>
+<img src="docs/validation/pep8_validation_app.jpg">
+</details>
+<details><summary>child_info.py</summary>
+<img src="docs/validation/pep8_validation_child_info.jpg">
+</details>
+<details><summary>config.py</summary>
+<img src="docs/validation/pep8_validation_config.jpg">
+</details>
+<details><summary>end.py</summary>
+<img src="docs/validation/pep8_validation_end.jpg">
+</details>
+<details><summary>prompts.py</summary>
+<img src="docs/validation/pep8_validation_prompts.jpg">
+</details>
+<details><summary>retrieve_story.py</summary>
+<img src="docs/validation/pep8_validation_retrieve_story.jpg">
+</details>
+<details><summary>save_story.py</summary>
+<img src="docs/validation/pep8_validation_save_story.jpg">
+</details>
+<details><summary>user_input.py</summary>
+<img src="docs/validation/pep8_validation_user_input.jpg">
+</details>
+<details><summary>validation.py</summary>
+<img src="docs/validation/pep8_validation_validation.jpg">
+</details>
+<details><summary>welcome.py</summary>
+<img src="docs/validation/pep8_validation_welcome.jpg">
+</details>
 
 ### Testing user stories
 

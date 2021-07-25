@@ -26,7 +26,9 @@ def save_story(story) -> str:
     Returns:
         str: user id
     """
+    # code form https://github.com/skorokithakis/shortuuid
     user_id = shortuuid.uuid()[:7]
+    # code from https://stackoverflow.com/a/37654233
     row = [user_id, story]
     with open('stories/saved-stories.csv', 'a') as f:
         w = csv.writer(f)

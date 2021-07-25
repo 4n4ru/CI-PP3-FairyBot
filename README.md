@@ -127,7 +127,9 @@ You can clone the repository by following these steps:
 - The Icon at the top of the page made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 ### Code
-
+- code for appending rows to a csv file was modified from the following example: https://stackoverflow.com/a/37654233
+- code for generating a unique user id was taken from here: https://github.com/skorokithakis/shortuuid
+- code to replace the placeholders in the .txt files with values from a dictionary was taken from here: https://stackoverflow.com/a/30646873
 
 ## Acknowledgments
 I would like to take the opportunity to thank:

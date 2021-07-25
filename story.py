@@ -57,6 +57,7 @@ def generate_story(child, story) -> str:
     child_dict = child.make_dictionary()
     with open(story) as f:
         story = f.read()
+    # code from https://stackoverflow.com/a/30646873
     custom_story = story.format(**child_dict)
     return custom_story
 

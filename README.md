@@ -333,7 +333,6 @@ The website was deployed using Heroku by "following these steps:
 8. Click enable automatic deploys and then deploy branch
 9. Wait for the app to build and then click on the "View" link
 
-
 You can fork the repository by following these steps:
 1. Go to the GitHub repository
 2. Click on the Fork button in the upper right-hand corner

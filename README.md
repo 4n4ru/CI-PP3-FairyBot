@@ -316,6 +316,10 @@ All the code passes with no errors and no warnings to show.
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
+| When saving the story, previously saved story is overwritten | Use append mode instead of write mode when opening file |
+| Not all children are displayed in choose child list | Fix indexing |
+| The terminal shows running your file: run.py instead of app.py | Change corresponding html |
+| Word of the story are broken at the end of the line in the terminal insteat of wrapping | Use textwrap and set it to 70 characters |
 
 ## Deployment
 The website was deployed using Heroku by "following these steps:

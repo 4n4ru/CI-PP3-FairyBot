@@ -89,7 +89,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - Shows a welcome message and an ASCII art containing an open book
 
 <details><summary>Welcome message</summary>
-<img src="docs/features/features_welcome_message.jpg">
+<img src="docs/features/feature_welcome_message.jpg">
 </details>
 
 ### Retrieve Saved Story
@@ -98,7 +98,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 6, 9
 
 <details><summary>Retrieve saved story</summary>
-<img src="docs/features/features_retreive_saved_story.jpg">
+<img src="docs/features/feature_retrieve_saved_story.jpg">
 </details>
 
 ### Choose Child
@@ -107,7 +107,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - Two children have been predefined as examples
 
 <details><summary>Choose child</summary>
-<img src="docs/features/features_choose_child.jpg">
+<img src="docs/features/feature_choose_child.jpg">
 </details>
 
 ### Add Child
@@ -116,10 +116,10 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 1, 2
 
 <details><summary>Add child</summary>
-<img src="docs/features/features_add_child.jpg">
+<img src="docs/features/feature_add_child.jpg">
 </details>
 <details><summary>Add child 2</summary>
-<img src="docs/features/features_add_child_2.jpg">
+<img src="docs/features/feature_add_child_2.jpg">
 </details>
 
 ### Choose Story
@@ -127,14 +127,14 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 3
 
 <details><summary>Choose story</summary>
-<img src="docs/features/features_choose_story.jpg">
+<img src="docs/features/feature_choose_story.jpg">
 </details>
 
 ### Custom Story
 - A story customized with the information provided for the child
 
 <details><summary>Custom story</summary>
-<img src="docs/features/features_custom_story.jpg">
+<img src="docs/features/feature_custom_story.jpg">
 </details>
 
 ### Save Story
@@ -143,7 +143,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 5, 9
 
 <details><summary>Save story</summary>
-<img src="docs/features/features_save_story.jpg">
+<img src="docs/features/feature_save_story.jpg">
 </details>
 
 ### New Story Option
@@ -152,7 +152,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 8
 
 <details><summary>New story option</summary>
-<img src="docs/features/features_new_story_option.jpg">
+<img src="docs/features/feature_new_story_option.jpg">
 </details>
 
 ### Delete Child
@@ -162,14 +162,14 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 4
 
 <details><summary>Delete child</summary>
-<img src="docs/features/features_delete_child.jpg">
+<img src="docs/features/feature_delete_child.jpg">
 </details>
 
 ### Thank You Message
 - Displays a thank you message and instructions on how to restart the game
 
 <details><summary>Thank you message</summary>
-<img src="docs/features/features_thank_you_message.jpg">
+<img src="docs/features/feature_thank_you_message.jpg">
 </details>
 
 ### User Input Validation
@@ -178,7 +178,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 - User stories covered: 7
 
 <details><summary>User input validation</summary>
-<img src="docs/features/features_user_input_validation.jpg">
+<img src="docs/features/feature_user_input_validation.jpg">
 </details>
 
 ## Validation

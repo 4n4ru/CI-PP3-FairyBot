@@ -31,23 +31,23 @@
 11. [Acknowledgments](#acknowledgments)
 
 ## Project Goals 
-Fairy Bot is an app that outputs a faritytale that has been personalized to the terminal.
+Fairy Bot is an app that outputs a fairytale that has been personalized to the terminal.
 
 ### User Goals
-- Get personalized fairy tales for the users child
+- Get personalized fairy tales for the user's child
 
 ### Site Owner Goals
-- Providing users with the option to pick different farity tales that are personalized for their child
+- Providing users with the option to pick different fairytales that are personalized for their child
 
 ## User Experience
 
 ### Target Audience
-- Parents who want to read personalized stories to their children at bed time
+- Parents who want to read personalized stories to their children at bedtime
 - Children who would like to read personalized stories themselves
 - Childminders who want to be able to personalize stories for many children
 
 ### User Requirements and Expectations
-- Easy set up
+- Easy setup
 - Ability to add and delete data
 - Easy to use
 
@@ -94,7 +94,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 ### Retrieve Saved Story
 - Offers an option to choose if you want to display a saved story
-- Propmpts for user id if the option is chosen and displays the relevant story
+- Prompts for user id if the option is chosen and displays the relevant story
 - User stories covered: 6, 9
 
 <details><summary>Retrieve saved story</summary>
@@ -111,7 +111,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 </details>
 
 ### Add Child
-- The option for adding a user defined child to the list of children
+- The option for adding a user-defined child to the list of children
 - Features questions about the child to help personalize the story
 - User stories covered: 1, 2
 
@@ -137,7 +137,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 ### Save Story
 - An option to save the story
-- If chosen, the story is saved to a .csv file and the user is given a unique user id for later access of the story
+- If chosen, the story is saved to a .csv file and the user is given a unique user id for later access to the story
 - User stories covered: 5, 9
 
 <details><summary>Save story</summary>
@@ -222,7 +222,7 @@ All the code passes with no errors and no warnings to show.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Add child | Choose Add child option when prompted to choose a child | Questions about the child are displayed, after providing valid imput for all of them a new list to choose your child from is displayed containing the newly added child | Works as expected |
+| Add child | Choose Add child option when prompted to choose a child | Questions about the child are displayed, after providing valid input for all of them a new list to choose your child from is displayed containing the newly added child | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/features/feature_add_child.jpg">
@@ -233,7 +233,7 @@ All the code passes with no errors and no warnings to show.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Add child | Add fist child, then choose the option to add a child again | After the first child is added, a new list of children to choose from is displayed and the user is able to choose Add child from the list again | Works as expected |
+| Add child | Add fist child, then choose the option to add a child again | After the first child is added, a new list of children to choose from is displayed and the user can choose Add child from the list again | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/features/feature_add_child_2.jpg">
@@ -243,7 +243,7 @@ All the code passes with no errors and no warnings to show.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Choose story | Choose a story from a list when prompted to do so | Affter choosing a child, a list of stories is displayed and the user is able to choose one of them | Works as expected |
+| Choose story | Choose a story from a list when prompted to do so | After choosing a child, a list of stories is displayed and the user can one of them | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/features/feature_choose_story.jpg">
@@ -264,7 +264,7 @@ All the code passes with no errors and no warnings to show.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Save story | When asked if story should be saved type yes | A succes message with a user id is saved | Works as expected |
+| Save story | When asked if the story should be saved type yes | A success message with a user id is saved | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/features/feature_save_story.jpg">
@@ -294,7 +294,7 @@ All the code passes with no errors and no warnings to show.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| New story option | When asked if a new story should be displayed type yes | The user is prompted to choose a child again | Works as expected |
+| New story option | When asked if the story should be saved type yes | The user is prompted to choose a child again | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/user_stories/user_story_8.jpg">
@@ -318,17 +318,17 @@ All the code passes with no errors and no warnings to show.
 | ----------- | ----------- |
 | When saving the story, previously saved story is overwritten | Use append mode instead of write mode when opening file |
 | Not all children are displayed in choose child list | Fix indexing |
-| The terminal shows running your file: run.py instead of app.py | Change corresponding html |
-| Word of the story are broken at the end of the line in the terminal insteat of wrapping | Use textwrap and set it to 70 characters |
+| The terminal shows running your file: run.py instead of app.py | Change corresponding HTML |
+| Words of the story are broken at the end of the line in the terminal instead of wrapping | Use textwrap and set it to 70 characters |
 
 ## Deployment
 The website was deployed using Heroku by "following these steps:
-1. Use the "pip freeze -> requiremnts.txt" comand in the terminal to save any libraries that need to be instaled in the file
-2. Log in or create a Heroku account
+1. Use the "pip freeze -> requiremnts.txt" command in the terminal to save any libraries that need to be instaled in the file
+2. Login or create a Heroku account
 3. Click the "new" button in the upper right corner and select "create new app"
 4. Choose an app name and your region and click "Create app"
 5. Go to the "settings" tab, add the python build pack and then the node.js build pack
-6. Go to the "deploy" tab and pick gitHub as a deployment method
+6. Go to the "deploy" tab and pick GitHub as a deployment method
 7. Search for a repository to connect to
 8. Click enable automatic deploys and then deploy branch
 9. Wait for the app to build and then click on the "View" link
@@ -336,7 +336,7 @@ The website was deployed using Heroku by "following these steps:
 
 You can fork the repository by following these steps:
 1. Go to the GitHub repository
-2. Click on Fork button in the upper right hand corner
+2. Click on the Fork button in the upper right-hand corner
 
 You can clone the repository by following these steps:
 1. Go to the GitHub repository 
@@ -355,7 +355,7 @@ You can clone the repository by following these steps:
 - ASCII art book was taken from https://www.asciiart.eu/books/books
 
 ### Code
-- code for appending rows to a csv file was modified from the following example: https://stackoverflow.com/a/37654233
+- code for appending rows to a CSV file was modified from the following example: https://stackoverflow.com/a/37654233
 - code for generating a unique user id was taken from here: https://github.com/skorokithakis/shortuuid
 - code to replace the placeholders in the .txt files with values from a dictionary was taken from here: https://stackoverflow.com/a/30646873
 

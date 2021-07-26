@@ -117,8 +117,6 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 
 <details><summary>Add child</summary>
 <img src="docs/features/feature_add_child.jpg">
-</details>
-<details><summary>Add child 2</summary>
 <img src="docs/features/feature_add_child_2.jpg">
 </details>
 
@@ -220,16 +218,92 @@ All the code passes with no errors and no warnings to show.
 
 ### Testing user stories
 
-1. As a user, I want to be able to pick a difficulty for the game
+1. As a user, I want to be able to add info about my child
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
+| Add child | Choose Add child option when prompted to choose a child | Questions about the child are displayed, after providing valid imput for all of them a new list to choose your child from is displayed containing the newly added child | Works as expected |
 
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature_add_child.jpg">
+<img src="docs/features/feature_add_child_2.jpg">
+</details>
+
+2. As a user, I want an option to add multiple children
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Add child | Add fist child, then choose the option to add a child again | After the first child is added, a new list of children to choose from is displayed and the user is able to choose Add child from the list again | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature_add_child_2.jpg">
+</details>
+
+3. As a user, I want to pick from a list of stories
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Choose story | Choose a story from a list when prompted to do so | Affter choosing a child, a list of stories is displayed and the user is able to choose one of them | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature_choose_story.jpg">
+</details>
+
+4. As a user, I want to be able to delete info about my child
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Delete child | When prompted if info about a child should be deleted, type yes. A list of children is displayed to choose from | After a child is chosen, the data is deleted and a success message is displayed | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature_delete_child.jpg">
+<img src="docs/user_stories/user_story_4.jpg">
+</details>
+
+5. As a user, I want to be able to save a story for later
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
 
 <details><summary>Screenshots</summary>
 <img src="">
 </details>
 
+6. As a user, I want to be able to read a saved story
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+7. As a site owner, I want the user to get feedback in case of wrong input
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+8. As a site owner, I want the user to be able to read multiple stories
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+9. As a site owner, I want only the user who saved the story to be able to read the same. 
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
 
 ## Bugs
 

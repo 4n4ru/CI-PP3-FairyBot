@@ -264,45 +264,52 @@ All the code passes with no errors and no warnings to show.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
+| Save story | When asked if story should be saved type yes | A succes message with a user id is saved | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/features/feature_save_story.jpg">
 </details>
 
 6. As a user, I want to be able to read a saved story
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
+| Retrieve saved story | When asked if a saved story should be displayed, type yes and provide your user id as an answer to the next prompt | A previously saved story is displayed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/features/feature_retrieve_saved_story.jpg">
 </details>
 
 7. As a site owner, I want the user to get feedback in case of wrong input
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
+| Input validation | A user provides invalid input | A message explaining the error is displayed and the user is prompted to try again | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/features/feature_input_validation.jpg">
 </details>
 
 8. As a site owner, I want the user to be able to read multiple stories
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
+| New story option | When asked if a new story should be displayed type yes | The user is prompted to choose a child again | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/user_stories/user_story_8.jpg">
 </details>
 
 9. As a site owner, I want only the user who saved the story to be able to read the same. 
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
+| Save story | When asked if story should be saved type yes | A success message is displayed containing a user id, and the user is asked to save this for future reference | Works as expected |
+| Retrieve stored story | When asked if a saved story should be displayed, type yes and provide your user id as an answer to the next prompt | Only if a correct user id is provided the corresponding story is displayed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/features/feature_save_story.jpg">
+<img src="docs/features/feature_retrieve_saved_story.jpg">
 </details>
 
 ## Bugs

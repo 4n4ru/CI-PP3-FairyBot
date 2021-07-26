@@ -1,6 +1,4 @@
-#from welcome import Welcome
-
-class FairyBot():
+class FairyBot:
 
     def main(self):
         """imports module for welcome message, retrieveing saved story, creating

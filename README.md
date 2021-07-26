@@ -86,6 +86,7 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 ## Features
 
 ### Welcome Message
+
 ### Retrieve Saved Story
 ### Choose Child
 ### Add Child

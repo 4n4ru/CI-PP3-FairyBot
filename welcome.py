@@ -2,7 +2,7 @@ import prompts
 import config
 
 
-class Welcome():
+class Welcome:
 
     def welcome(self):
         """Prints a welcome message and some ASCII art to the terminal

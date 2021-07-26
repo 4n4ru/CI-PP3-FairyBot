@@ -86,18 +86,100 @@ Fairy Bot is an app that outputs a faritytale that has been personalized to the 
 ## Features
 
 ### Welcome Message
+- Shows a welcome message and an ASCII art containing an open book
+
+<details><summary>Welcome message</summary>
+<img src="docs/features/features_welcome_message.jpg">
+</details>
 
 ### Retrieve Saved Story
-### Choose Child
-### Add Child
-### Choose Story
-### Custom Story
-### Save Story
-### New Story Option
-### Delete Child
-### Thank You Message
-### User Input Validation
+- Offers an option to choose if you want to display a saved story
+- Propmpts for user id if the option is chosen and displays the relevant story
+- User stories covered: 6, 9
 
+<details><summary>Retrieve saved story</summary>
+<img src="docs/features/features_retreive_saved_story.jpg">
+</details>
+
+### Choose Child
+- Offers the user a list of children to choose from
+- Has the option to add a new child to the list
+- Two children have been predefined as examples
+
+<details><summary>Choose child</summary>
+<img src="docs/features/features_choose_child.jpg">
+</details>
+
+### Add Child
+- The option for adding a user defined child to the list of children
+- Features questions about the child to help personalize the story
+- User stories covered: 1, 2
+
+<details><summary>Add child</summary>
+<img src="docs/features/features_add_child.jpg">
+</details>
+<details><summary>Add child 2</summary>
+<img src="docs/features/features_add_child_2.jpg">
+</details>
+
+### Choose Story
+- Based on the sex of the child chosen previously lists the available stories and asks the user to choose one
+- User stories covered: 3
+
+<details><summary>Choose story</summary>
+<img src="docs/features/features_choose_story.jpg">
+</details>
+
+### Custom Story
+- A story customized with the information provided for the child
+
+<details><summary>Custom story</summary>
+<img src="docs/features/features_custom_story.jpg">
+</details>
+
+### Save Story
+- An option to save the story
+- If chosen, the story is saved to a .csv file and the user is given a unique user id for later access of the story
+- User stories covered: 5, 9
+
+<details><summary>Save story</summary>
+<img src="docs/features/features_save_story.jpg">
+</details>
+
+### New Story Option
+- An option to display another story
+- Returns to the choose child feature if a new story is required
+- User stories covered: 8
+
+<details><summary>New story option</summary>
+<img src="docs/features/features_new_story_option.jpg">
+</details>
+
+### Delete Child
+- An option to delete a child
+- If the option is chosen, a list of children to choose from
+- The chosen child is deleted
+- User stories covered: 4
+
+<details><summary>Delete child</summary>
+<img src="docs/features/features_delete_child.jpg">
+</details>
+
+### Thank You Message
+- Displays a thank you message and instructions on how to restart the game
+
+<details><summary>Thank you message</summary>
+<img src="docs/features/features_thank_you_message.jpg">
+</details>
+
+### User Input Validation
+- Displays an error message if user input is not in a form that was expected
+- Ask for a new input
+- User stories covered: 7
+
+<details><summary>User input validation</summary>
+<img src="docs/features/features_user_input_validation.jpg">
+</details>
 
 ## Validation
 
